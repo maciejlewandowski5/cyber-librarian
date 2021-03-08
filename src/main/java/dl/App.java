@@ -1,5 +1,6 @@
 package dl;
 
+import dl.parser.Article;
 import dl.parser.ArticlesLoader;
 
 import java.io.IOException;
@@ -12,6 +13,8 @@ public class App
 {
     public static void main( String[] args ) throws IOException {
         ArticlesLoader articlesLoader = new ArticlesLoader();
-        System.out.println( "Hello World!" );
+        for (Article a : articlesLoader.getArticles()) {
+            System.out.println(a.toString());
+        }
     }
 }

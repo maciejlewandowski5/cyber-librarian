@@ -14,7 +14,7 @@ import java.util.Set;
 public class ArticlesLoader {
     private File[] files;
     private List<Document> docs;
-    private Set<Article> articles;
+    private List<Article> articles;
 
     public ArticlesLoader() throws IOException {
         File folder = new File(".\\res\\reuters21578\\articles");
@@ -32,11 +32,21 @@ public class ArticlesLoader {
     }
 
     private void parseArticles() {
-        articles = new HashSet<>();
+        articles = new LinkedList<>();
         for (Document doc : docs) {
             for (Element element : doc.select("REUTERS")) {
-                System.out.println(element.select("TITLE"));
+                String title = element.select("TITLE").text();
+                if (!title.isEmpty()) {
+                    String places = element.select("PLACES").select("D").text();
+                    String body = element.select("TEXT").text();
+                    Article article = new Article(title, places, body);
+                    articles.add(article);
+                }
             }
         }
+    }
+
+    public List<Article> getArticles() {
+        return articles;
     }
 }
