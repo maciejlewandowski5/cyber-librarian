@@ -6,10 +6,7 @@ import org.jsoup.nodes.Element;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ArticlesLoader {
     private File[] files;
@@ -21,7 +18,7 @@ public class ArticlesLoader {
         this.files = folder.listFiles();
         loadFiles();
         parseArticles();
-//        System.out.println(docs.get(0));
+        System.out.println();
     }
 
     private void loadFiles() throws IOException {
@@ -31,19 +28,32 @@ public class ArticlesLoader {
         }
     }
 
-    private void parseArticles() {
+    private void parseArticles() throws IOException {
         articles = new LinkedList<>();
         for (Document doc : docs) {
             for (Element element : doc.select("REUTERS")) {
                 String title = element.select("TITLE").text();
                 if (!title.isEmpty()) {
                     String places = element.select("PLACES").select("D").text();
-                    String body = element.select("TEXT").text();
+                    List<String> body = processText(Arrays.asList(element.select("TEXT").text().split(" ")));
                     Article article = new Article(title, places, body);
                     articles.add(article);
                 }
             }
         }
+    }
+
+    private List<String> processText(List<String> preprocess) throws IOException {
+        List<String> out = new ArrayList<>();
+
+        for (String word : preprocess) {
+            String stemmed = Stemmer.stemWord(word.toLowerCase());
+            if (StopWord.removeStopword(stemmed)) {
+                out.add(stemmed);
+            }
+        }
+
+        return out;
     }
 
     public List<Article> getArticles() {

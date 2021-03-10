@@ -5,9 +5,9 @@ import java.util.List;
 public class Article {
     private String title;
     private String places;
-    private String body;
+    private List<String> body;
 
-    public Article(String title, String places, String body) {
+    public Article(String title, String places, List<String> body) {
         this.title = title;
         this.places = places;
         this.body = body;
@@ -17,8 +17,8 @@ public class Article {
     public String toString() {
         return "Article{" +
                 "title='" + title + '\'' +
-                ", places=" + places +
-                ", body='" + body + '\'' +
+                ", places='" + places + '\'' +
+                ", body=" + body +
                 '}';
     }
 
@@ -30,7 +30,7 @@ public class Article {
         return places;
     }
 
-    public String getBody() {
+    public List<String> getBody() {
         return body;
     }
 }

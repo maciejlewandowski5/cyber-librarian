@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="knn" target="1.7" />
+      <module name="knn" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
