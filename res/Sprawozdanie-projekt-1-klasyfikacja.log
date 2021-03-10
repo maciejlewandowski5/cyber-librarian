@@ -1,0 +1,222 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  10 MAR 2021 14:47
+entering extended mode
+**./Sprawozdanie-projekt-1-klasyfikacja.tex
+(Sprawozdanie-projekt-1-klasyfikacja.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> xparse <2020-03-03> (classrep.cls
+Document Class: classrep 2009/11/27 ICS Class Assignment Report
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/mwcls\mwart.cls
+Document Class: mwart 2017/05/13 v0.75 A LaTeX document class (MW)
+*** Beta version. Formatting may change
+*** in future versions of this class.
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/mwcls\mw12.clo
+File: mw12.clo 2017/05/13 v0.75 A document class size option (MW)
+)
+\@parindent=\dimen138
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen139
+)
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\polski.sty
+Package: polski 2017/05/04 v1.3.4 Polish language package
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/base\ot4enc.def
+File: ot4enc.def 2020/08/10 v2.0s Standard LaTeX file
+Now handling font encoding OT4 ...
+... no UTF-8 mapping file for font encoding OT4
+))
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 2
+0.
+ (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
+File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count187
+\l__pdf_internal_box=\box47
+) (Sprawozdanie-projekt-1-klasyfikacja.aux
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+)
+\openout1 = `Sprawozdanie-projekt-1-klasyfikacja.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count188
+\scratchdimen=\dimen140
+\scratchbox=\box48
+\nofMPsegments=\count189
+\nofMParguments=\count190
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count191
+\MPscratchDim=\dimen141
+\MPnumerator=\count192
+\makeMPintoPDFobject=\count193
+\everyMPtoPDFconversion=\toks18
+)
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
+21.
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
+File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 23--28
+\OT4/cmr/m/n/12 daw-cze-go/do±wiadczalnego/obliczeniowego (wg in-dy-wi-du-al-ny
+ch po-trzeb zwi¡-
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 33.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 33.
+[1
+
+{C:/Users/macie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
+Overfull \hbox (3.55147pt too wide) in paragraph at lines 172--176
+[]\OT4/cmr/m/n/12 Krótki ilu-stro-wa-ny opis jak u»yt-kow-nik mo-»e ko-rzy-sta¢
+ z apli-ka-cji, w szcze-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--181
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--198
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--201
+
+ []
+
+[5] (Sprawozdanie-projekt-1-klasyfikacja.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1441 strings out of 479334
+ 21975 string characters out of 2857085
+ 310820 words of memory out of 3000000
+ 18923 multiletter control sequences out of 15000+200000
+ 410974 words of font info for 48 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 63i,7n,73p,448b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}<C:
+/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/macie/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/macie/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/pl/plr10.pfb><C:/Users/macie/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/pl/plr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/pl/plr17.pfb>
+Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (5 pages, 117446 byte
+s).
+PDF statistics:
+ 55 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

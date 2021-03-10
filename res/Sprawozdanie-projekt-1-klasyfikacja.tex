@@ -8,12 +8,12 @@
 \coursename{Komputerowe systemy rozpoznawania}
 \courseyear{2020/2021}
 
-\courseteacher{tytuł/stopień imię nazwisko}
-\coursegroup{dzień, godzina zajęć}
+\courseteacher{dr inż. Marcin Kacprowicz}
+\coursegroup{poniedziałek, 12:00}
 
 \author{
-  \studentinfo{Autor Pierwszy}{nr albumu 1} \and
-  \studentinfo{Autor Drugi}{nr albumu 2} }
+  \studentinfo{Maciej Lewandowski}{224357} \and
+  \studentinfo{Kamil Dike}{224282} }
 
 \title{Projekt 1. Klasyfikacja dokumentów tekstowych}
 
@@ -27,32 +27,120 @@ pracą inżynierską/naukową/zawodową). \\
 opisie Projektu 1. i Harmonogramie ZAJĘĆ na WIKAMP KSR jako efekty zadań w~poszczególnych tygodniach}. 
 
 \section{Cel projektu}
-Zwięzły (2-3 zdania) opis
-problemu badawczego/obliczeniowego,  uwzględniający część badawczą i implementacyjną. \\
-\indent Zamieszczony opis (własny, nie skopiowany) zawiera
-przypisy do literatury (bibliografii) zamieszczonej na końcu raportu/sprawozdania
-zgodnie z~Polską Normą cytowania bibliografii (zob. materiały BG PŁ pt. ,,Bibliografia
-załącznikowa'').\\
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 02 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
-
+Celem zadania jest stworzenie systemu klasyfikującego teksty w zależności od kraju który jest opisywany przez tekst.
+\indent System został oparty o metodę k-NN. Ponad to została przeanalizowana skuteczność działania programu w odniesieniu do nietraktowanego wektora cech.
 
 \section{Klasyfikacja nadzorowana metodą $k$-NN}
-Krótki opis metody $k$-NN: zasada działania, wymagane parametry wejściowe, format
-i~znaczenie wyników/rezultatów. Opis własny z przypisami do literatury -- minimum
-teorii potrzebnej do zadania, tak by inżynier innej specjalności zrozumiał dalszy
-opis \cite{tadeusiewicz90}.\\
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 02 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
+Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podobieństwa obiektów blisko położonych w przestrzeni cech. Algorytm składa się z następujących kroków:
+\begin{enumerate}
+\item Weź obiekt do klasyfikacji i znajdź $k$ najbliższych sąsiadów ze zbioru uczącego
+\item Zdeterminuj klasę badanego obiektu jako klasę większości instancji spośród $k$ najbliższych sąsiadów.
+\end{enumerate}
+Odległość dwóch obiektów określana jest poprzez określoną metrykę. Porównywane będą wektory cech reprezentujące obiekty.
+\indent Algorytm wymaga na wejściu określenia: liczby sąsiadów, metryki, podziału zbioru uczącego. Rezultatem działania algorytmu $k$-NN są sklasyfikowane obiekty. 
 
 \subsection{Ekstrakcja cech, wektory cech}
-Wyekstrahowane cechy, min. 10, opisane słownie oraz wzorami, z objaśnieniem
-wszystkich symboli i przykładami użycia (ułatwiających czytelnikowi zrozumienie ich
-znaczenia w zadaniu klasyfikacji). Postać wektora wartości cech po procesie
-ekstrakcji. Użyte oznaczenia są jednolite w całym
-raporcie/sprawozdaniu. \\ 
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 02 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
+Na potrzeby reprezentacji obiektów poprzez wektory cech wybrano cechy:
+\begin{enumerate}
+
+\item Liczba słów w dokumencie
+\begin{equation}
+v_{1}=\hat{A}\label{eq:eps}
+\end{equation}
+,gdzie 
+\newline $A$ oznacza artykuł taki, że $A=[s_1,s_2,s_3,. . . ,s_T]$
+\newline $s_i$ oznacza $i$- te słowo w artykule
+\newline $\hat{A}$ oznacza moc zbioru $A$
+
+\item Wartość logiczna z logiki trój-wartościowej określająca dominujący rodzaj jednostek występujących w tekście. Wartość cechy 1 oznacza że dominują w artykule jednostki układu SI. Wartość cechy 0 oznacza że w artykule dominują jednostki układu Imperialnego. Wartość cechy 1/2 oznacza że w artykule nie dominują jednostki układu SI anie jednostki układu imperialnego.
+\begin{equation}
+v_{2}=l(A) \label{eq:eps}
+\end{equation}
+,gdzie
+\newline $l:\mathcal{A} \rightarrow \{0,\frac{1}{2},1\}$, $l$ funkcja przyporządkowywuje artykułowi wartość logiczną 0, 1/2 albo 1 w zależności od ilości wystąpień jednostek danego typu(si/imperialne).
+\newline $\mathcal{A}$ oznacza zbiór wszystkich możliwych wektorów reprezentujących artykuły.
+
+\item Najczęściej występujący miesiąc
+\begin{equation}
+v_{3}=m(A) \label{eq:eps}
+\end{equation}
+,gdzie
+\newline $m:\mathcal{A} \rightarrow \{0,1,2,. . . ,12\}$, $m$ funkcja przyporządkowywująca artykułowi wartość całkowitą od 0 do 12, w zależności od ilości wystąpień danego miesiąca w zbiorze $A$.
+
+
+\item Najczęściej występujący typ spółki/firmy
+\begin{equation}
+v_{4}=f(max(k(A,G_S))) \label{eq:eps}
+\end{equation}
+,gdzie
+\newline $\mathcal{G}$ zbiór wszystkich możliwych wektorów słów kluczowych
+\newline $G_S = [x_1,x_2,x_3,. . . , x_j]$ wektor słów kluczowych rodzajów spółek
+\newline $x_i$ oznacza $i$-te słowo kluczowe
+\newline $\mathcal{H}$ zbiór wszystkich możliwych wektorów częstości występowania słów kluczowych
+\newline $H$ wektor częstości występowania słów kluczowych
+\newline $f:\mathcal{H} \rightarrow \mathcal{G}$, f jest funkcją przyporządkowującą zbiór częstości do zbioru słów kluczowych
+\newline $k:\mathcal{A},\mathcal{G}\rightarrow\mathcal{H}$, k jest funkcją zwracającą wektor częstości dla zapewnionego artykułu oraz wektora słów kluczowych
+
+\item Najczęściej występująca w tekście nazwa giełdy
+\begin{equation}
+v_{5}=f(max(k(A,G_G))) \label{eq:eps}
+\end{equation}
+,gdzie
+\newline $G_g = [x_1,x_2,x_3,. . . , x_j]$ wektor słów kluczowych nazw giełd
+
+\item Względna częstość występowania najczęściej pojawiającej się nazwy morza lub oceanu
+\begin{equation}
+v_{6}=\frac{max(k(A,G_M))}{v_1}\label{eq:eps}
+\end{equation}
+,gdzie
+\newline $G_M = [x_1,x_2,x_3,. . . , x_j]$ wektor słów kluczowych nazw mórz i oceanów
+
+
+\item Względna ilość słów o długości do n znaków
+\begin{equation}
+v_{7}=\frac{c(A,0,n)}{v_1}\label{eq:eps}
+\end{equation}
+,gdzie
+\newline $c:\mathcal{A},N,M\rightarrow P$ c jest funkcją zliczającą ilość słów o długości od n do m znaków
+\newline $N = \{n:n\in\mathrm{N} \land n>0\}$
+\newline $M = \{m:m\in\mathrm{N} \land m>n\}$
+\newline $P = \{p:p\in\mathrm{N}\}$
+
+\item Względna ilość słów o długości od n do m znaków
+\begin{equation}
+v_{8}=\frac{c(A,n,m)}{v_1}\label{eq:eps}
+\end{equation}
+
+
+\item Względna ilość słów o długości od m znaków
+\begin{equation}
+v_{9}=\frac{c(A,m,\infty)}{v_1}\label{eq:eps}
+\end{equation}
+
+\item Najczęściej występujący rok w artykule
+\begin{equation}
+v_{10}=yr(A)\label{eq:eps}
+\end{equation}
+,gdzie
+\newline $yr:\mathcal{A}\rightarrow\mathcal{P}$, $yr$ to funkcja zwracająca najczęściej występującą datę w tekście
+
+
+\item Ilość cen w tekście
+\begin{equation}
+v_{11}=dl(A)\label{eq:eps}
+\end{equation}
+,gdzie
+\newline $dl:\mathcal{A}\rightarrow\mathcal{P}$, $yr$ to funkcja zwracająca najczęściej występujący rok w tekście
+
+
+\item Liczba unikalnych słów
+\begin{equation}
+v_{12}=us(A)\label{eq:eps}
+\end{equation}
+,gdzie
+\newline $us:\mathcal{A}\rightarrow\mathcal{P}$, $yr$ to funkcja zwracająca ilość różnych słów w tekście
+\end{enumerate}
+
 \subsection{Miary jakości klasyfikacji} 
 Miary jakości klasyfikacji (Accuracy, Precision,
 Recall, F1). We wprowadzeniu zaprezentować minimum teorii potrzebnej do realizacji
