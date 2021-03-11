@@ -98,4 +98,10 @@ public class UnitType implements Feature {
             return 0.5f;
         }
     }
+
+    @Override
+    public void clear() {
+        numberOfImperialUnits =0;
+        numberOfSiUnits=0;
+    }
 }

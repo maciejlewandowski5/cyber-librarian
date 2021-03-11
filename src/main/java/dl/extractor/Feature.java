@@ -6,4 +6,6 @@ public interface Feature {
     void extract(Article article);
 
     Object getFeature();
+
+    void clear();
 }

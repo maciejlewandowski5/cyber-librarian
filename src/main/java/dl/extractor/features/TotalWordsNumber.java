@@ -20,4 +20,9 @@ public class TotalWordsNumber implements Feature {
     public Integer getFeature() {
         return size;
     }
+
+    @Override
+    public void clear() {
+        size=0;
+    }
 }
