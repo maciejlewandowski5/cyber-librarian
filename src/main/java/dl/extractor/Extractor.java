@@ -18,6 +18,10 @@ public class Extractor {
         features.forEach(feature -> feature.extract(article));
     }
 
+    public void clear(){
+        features.forEach(Feature::clear);
+    }
+
     public Object getFeature(int i){
         return features.get(i).getFeature();
     }

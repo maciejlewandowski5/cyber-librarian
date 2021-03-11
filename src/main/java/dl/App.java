@@ -17,24 +17,31 @@ public class App {
     public static void main(String[] args) throws IOException {
         ArticlesLoader articlesLoader = new ArticlesLoader();
 
+        Extractor extractor = new Extractor();
+        TotalWordsNumber totalWordsNumber = new TotalWordsNumber();
+        UnitType unitType = new UnitType();
+        NLengthCharCounter shortWords = new NLengthCharCounter(0, 4);
+        NLengthCharCounter middleWords = new NLengthCharCounter(5, 8);
+        NLengthCharCounter longWords = new NLengthCharCounter(9, Integer.MAX_VALUE);
+        MostCommonYear mostCommonYear = new MostCommonYear();
+
+        extractor.addFeature(totalWordsNumber);
+        extractor.addFeature(unitType);
+        extractor.addFeature(shortWords);
+        extractor.addFeature(middleWords);
+        extractor.addFeature(longWords);
+        extractor.addFeature(mostCommonYear);
+
         for (Article a : articlesLoader.getArticles()) {
             System.out.println(a);
-            Extractor extractor = new Extractor();
-            TotalWordsNumber totalWordsNumber = new TotalWordsNumber();
-            UnitType unitType = new UnitType();
-            NLengthCharCounter shortWords = new NLengthCharCounter(0, 4);
-            NLengthCharCounter middleWords = new NLengthCharCounter(5, 8);
-            NLengthCharCounter longWords = new NLengthCharCounter(9, Integer.MAX_VALUE);
-            MostCommonYear mostCommonYear = new MostCommonYear();
-
-            extractor.addFeature(totalWordsNumber);
-            extractor.addFeature(unitType);
-            extractor.addFeature(shortWords);
-            extractor.addFeature(middleWords);
-            extractor.addFeature(longWords);
-            extractor.addFeature(mostCommonYear);
+            extractor.clear();
             extractor.extract(a);
             if (extractor.getFeature(1) != null) {
+                System.out.println(extractor.getFeature(0));
+                System.out.println(extractor.getFeature(1));
+                System.out.println(extractor.getFeature(2));
+                System.out.println(extractor.getFeature(3));
+                System.out.println(extractor.getFeature(4));
                 System.out.println(extractor.getFeature(5));
             }
             ;
