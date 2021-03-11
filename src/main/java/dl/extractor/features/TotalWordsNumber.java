@@ -17,7 +17,7 @@ public class TotalWordsNumber implements Feature {
     }
 
     @Override
-    public Object getFeature() {
+    public Integer getFeature() {
         return size;
     }
 }
