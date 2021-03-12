@@ -43,6 +43,7 @@ public class ArticlesLoader {
         }
     }
 
+    // Implement Stemming and StopWord check.
     private List<String> processText(List<String> preprocess) throws IOException {
         List<String> out = new ArrayList<>();
 
