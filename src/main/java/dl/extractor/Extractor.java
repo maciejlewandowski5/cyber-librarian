@@ -13,7 +13,6 @@ public class Extractor {
         features = new ArrayList<>();
     }
 
-
     public void extract(Article article){
         features.forEach(feature -> feature.extract(article));
     }

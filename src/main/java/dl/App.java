@@ -1,6 +1,6 @@
 package dl;
 
-import dl.features.MostFrequent;
+import dl.extractor.features.MostFrequent;
 import dl.model.MostFrequentFile;
 import dl.extractor.Extractor;
 import dl.extractor.features.MostCommonYear;
@@ -23,6 +23,7 @@ public class App {
         NLengthCharCounter middleWords = new NLengthCharCounter(5, 8);
         NLengthCharCounter longWords = new NLengthCharCounter(9, Integer.MAX_VALUE);
         MostCommonYear mostCommonYear = new MostCommonYear();
+        MostFrequent mostFrequentMonth = new MostFrequent(MostFrequentFile.MONTHS);
 
         extractor.addFeature(totalWordsNumber);
         extractor.addFeature(unitType);
@@ -30,6 +31,7 @@ public class App {
         extractor.addFeature(middleWords);
         extractor.addFeature(longWords);
         extractor.addFeature(mostCommonYear);
+        extractor.addFeature(mostFrequentMonth);
 
         for (Article a : articlesLoader.getArticles()) {
             System.out.println(a);
@@ -42,14 +44,10 @@ public class App {
                 System.out.println(extractor.getFeature(3));
                 System.out.println(extractor.getFeature(4));
                 System.out.println(extractor.getFeature(5));
+                System.out.println(extractor.getFeature(6));
             }
             ;
         }
-        Article article = articlesLoader.getArticles().get(0);
-
-        MostFrequent mostFrequentMonth = new MostFrequent(article.getBody(), MostFrequentFile.MONTHS);
-        String highest = mostFrequentMonth.getHighest();
-        System.out.println();
 
     }
 }
