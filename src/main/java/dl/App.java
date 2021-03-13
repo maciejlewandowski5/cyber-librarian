@@ -1,12 +1,8 @@
 package dl;
 
-import dl.extractor.features.MostFrequent;
+import dl.extractor.features.*;
 import dl.model.MostFrequentFile;
 import dl.extractor.Extractor;
-import dl.extractor.features.MostCommonYear;
-import dl.extractor.features.NLengthCharCounter;
-import dl.extractor.features.TotalWordsNumber;
-import dl.extractor.features.UnitType;
 import dl.parser.Article;
 import dl.parser.ArticlesLoader;
 
@@ -24,6 +20,8 @@ public class App {
         NLengthCharCounter longWords = new NLengthCharCounter(9, Integer.MAX_VALUE);
         MostCommonYear mostCommonYear = new MostCommonYear();
         MostFrequent mostFrequentMonth = new MostFrequent(MostFrequentFile.MONTHS);
+        NumberOfPrices numberOfPrices = new NumberOfPrices();
+        UniqueWordsNumber uniqueWordsNumber = new UniqueWordsNumber();
 
         extractor.addFeature(totalWordsNumber);
         extractor.addFeature(unitType);
@@ -32,6 +30,8 @@ public class App {
         extractor.addFeature(longWords);
         extractor.addFeature(mostCommonYear);
         extractor.addFeature(mostFrequentMonth);
+        extractor.addFeature(numberOfPrices);
+        extractor.addFeature(uniqueWordsNumber);
 
         for (Article a : articlesLoader.getArticles()) {
             System.out.println(a);
@@ -45,8 +45,9 @@ public class App {
                 System.out.println(extractor.getFeature(4));
                 System.out.println(extractor.getFeature(5));
                 System.out.println(extractor.getFeature(6));
+                System.out.println(extractor.getFeature(7));
+                System.out.println(extractor.getFeature(8));
             }
-            ;
         }
 
     }
