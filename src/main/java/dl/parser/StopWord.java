@@ -3,15 +3,16 @@ package dl.parser;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class StopWord {
-    private static List<String> stemmedStopwords;
+    private static Set<String> stemmedStopwords;
 
     static {
         try {
-            stemmedStopwords = new ArrayList<>();
+            stemmedStopwords = new HashSet<>();
             List<String> stopwords = Files.readAllLines(Paths.get("stopwords.txt"));
             for (String word : stopwords) {
                 stemmedStopwords.add(word.toLowerCase());
@@ -20,8 +21,6 @@ public class StopWord {
             e.printStackTrace();
         }
     }
-
-    ;
 
     public static boolean removeStopword(String word) throws IOException {
         if (stemmedStopwords.contains(word)) {
