@@ -31,13 +31,33 @@ Celem zadania jest stworzenie systemu klasyfikującego teksty w zależności od 
 \indent System został oparty o metodę k-NN. Ponad to została przeanalizowana skuteczność działania programu w odniesieniu do nietraktowanego wektora cech.
 
 \section{Klasyfikacja nadzorowana metodą $k$-NN}
-Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podobieństwa obiektów blisko położonych w przestrzeni cech. Algorytm składa się z następujących kroków:
+Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podobieństwa obiektów blisko położonych w przestrzeni cech. Jak podaje \cyte{tadeusiewicz90} założenia dla algorytmu:
+\newline $numclass$ - liczba rozpoznawanych klas
+\newline $dim$ - wymiar przestrzeni cech
+\newline $num$ - liczba obiektów ciągu uczącego
+\newline $sampl[1... num][1...dim+1]$ - ciąg uczący
+\newline $rec$ - identyfikator rozpoznanego obiektu
+\newline $obj[1...dim]$ - rozpoznawany obiekt
+\newline $dist(sampl[k],obj)$ - funkcja podająca odległość między i-tym elementem ciągu uczącego a rozpoznawanym obiektem  
+\newline $k$ - zmienna określająca ilość uwzględnianych sąsiadów
+\newline $tab[1...num][1...2]$ - tablica odległości
+\newline $sort(tab)$ - funkcja sortująca tablicę
+\newline $fun[1..numclass]$ - tabela wartości funkcji przynależności
+\newline $pointmax(fun)$  - funkcja wskazująca numer klasy, dla której wartość przynależności jest maksymalna. Algorytm według \cyte{tadeusiewicz90} składa się z następujących kroków:
 \begin{enumerate}
-\item Weź obiekt do klasyfikacji i znajdź $k$ najbliższych sąsiadów ze zbioru uczącego
-\item Zdeterminuj klasę badanego obiektu jako klasę większości instancji spośród $k$ najbliższych sąsiadów.
+\item wyzeruj tablicę $fun$
+\item wykonaj pętlę $s$ od $i=1$ do $num$
+\item w pętli $s$ przyporządkuj elementowi tablicy $tab[i][1]$ wynik wywołania funkcji $dist(sampl[i],obj)$
+\item w pętli $s$ przyporządkuj elementowi tablicy $tab[i][2]$ element tablicy $sampl[i][dim+1]$
+\item zakończ pętlę $s$
+\item wykonaj sortowanie tablicy $sort(tab)$
+\item rozpocznij pętlę $q$ od $i=1$ do $i=k$
+\item w pętli $q$ przyporządkuj elementowi tablicy $fun[tab[i][2]]$ element tablicy $fun[tab[i][2]]+1$
+\item zakończ pętlę $q$
+\item przyporządkuj zmiennej $rec$ wynik funkcji $pointmax(fun)$
 \end{enumerate}
-Odległość dwóch obiektów określana jest poprzez określoną metrykę. Porównywane będą wektory cech reprezentujące obiekty.
-\indent Algorytm wymaga na wejściu określenia: liczby sąsiadów, metryki, podziału zbioru uczącego. Rezultatem działania algorytmu $k$-NN są sklasyfikowane obiekty. 
+\indent Algorytm jako dane wejściowe pobiera obiekt do klasyfikacji $obj$ oraz zmienną przechowującą informacje o klasie do którego zostanie przyporządkowany $rec$.Odległość dwóch obiektów określana jest poprzez określoną metrykę. Porównywane będą wektory cech reprezentujące obiekty.
+
 
 \subsection{Ekstrakcja cech, wektory cech}
 Na potrzeby reprezentacji obiektów poprzez wektory cech wybrano cechy:
@@ -88,9 +108,9 @@ v_{5}=f(max(k(A,G_G))) \label{eq:eps}
 ,gdzie
 \newline $G_g = [x_1,x_2,x_3,. . . , x_j]$ wektor słów kluczowych nazw giełd
 
-\item Względna częstość występowania najczęściej pojawiającej się nazwy morza lub oceanu
+\item Najczęściej występująca nazwa morza lub oceanu
 \begin{equation}
-v_{6}=\frac{max(k(A,G_M))}{v_1}\label{eq:eps}
+v_{6}={f(max(k(A,G_M)))}\label{eq:eps}
 \end{equation}
 ,gdzie
 \newline $G_M = [x_1,x_2,x_3,. . . , x_j]$ wektor słów kluczowych nazw mórz i oceanów
