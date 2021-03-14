@@ -12,10 +12,11 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class MostFrequent implements Feature {
+public class MostFrequentPhrase implements Feature {
     private Map<String, Integer> map;
+    private ArrayList<String> phrases;
 
-    public MostFrequent(MostFrequentFile filenameEnum) {
+    public MostFrequentPhrase (MostFrequentFile filenameEnum) {
         String filename = "";
         switch (filenameEnum) {
             case MONTHS:
@@ -27,9 +28,13 @@ public class MostFrequent implements Feature {
             case STOCK_EXCHANGE:
                 filename = "stockExchange.txt";
                 break;
+            case SEAS:
+                filename = "seas.txt";
+                break;
         }
 
         map = new HashMap<>();
+        phrases = new ArrayList<>();
         loadFile(filename);
     }
 
@@ -38,6 +43,7 @@ public class MostFrequent implements Feature {
             lines.forEachOrdered(line -> {
                 line = Stemmer.stemWord(line.toLowerCase());
                 map.put(line, 0);
+                phrases.add(line);
             });
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,20 +52,26 @@ public class MostFrequent implements Feature {
 
     @Override
     public void extract(Article article) {
-        List<String> text = article.getBody();
-        text.forEach(word -> {
-            if (map.containsKey(word)) {
-                map.put(word, map.get(word) + 1);
+        String text = article.getBody().toString();
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            int lastOccurrence = 0;
+            while (lastOccurrence != -1) {
+                lastOccurrence = text.indexOf(entry.getKey(), lastOccurrence + 1);
+                if (lastOccurrence != -1) {
+                    map.put(entry.getKey(), entry.getValue() + 1);
+                }
             }
-        });
+        }
     }
 
     @Override
     public Object getFeature() {
-        if (map.isEmpty()){
-            return 0;
+        String key = Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey();
+        if (map.get(key) > 0) {
+            return phrases.indexOf(key) + 1;
         }
-        return Integer.valueOf(Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey());
+        return 0;
     }
 
     @Override

@@ -20,6 +20,9 @@ public class App {
         NLengthCharCounter longWords = new NLengthCharCounter(9, Integer.MAX_VALUE);
         MostCommonYear mostCommonYear = new MostCommonYear();
         MostFrequent mostFrequentMonth = new MostFrequent(MostFrequentFile.MONTHS);
+        MostFrequent mostFrequentBusinessEntity = new MostFrequent(MostFrequentFile.BUSINESS_ENTITY);
+        MostFrequent mostFrequentStockExchange = new MostFrequent(MostFrequentFile.STOCK_EXCHANGE);
+        MostFrequent mostFrequentSea = new MostFrequent(MostFrequentFile.SEAS);
         NumberOfPrices numberOfPrices = new NumberOfPrices();
         UniqueWordsNumber uniqueWordsNumber = new UniqueWordsNumber();
 
@@ -30,6 +33,9 @@ public class App {
         extractor.addFeature(longWords);
         extractor.addFeature(mostCommonYear);
         extractor.addFeature(mostFrequentMonth);
+        extractor.addFeature(mostFrequentBusinessEntity);
+        extractor.addFeature(mostFrequentStockExchange);
+        extractor.addFeature(mostFrequentSea);
         extractor.addFeature(numberOfPrices);
         extractor.addFeature(uniqueWordsNumber);
 
@@ -47,6 +53,9 @@ public class App {
                 System.out.println(extractor.getFeature(6));
                 System.out.println(extractor.getFeature(7));
                 System.out.println(extractor.getFeature(8));
+                System.out.println(extractor.getFeature(9));
+                System.out.println(extractor.getFeature(10));
+                System.out.println(extractor.getFeature(11));
             }
         }
 

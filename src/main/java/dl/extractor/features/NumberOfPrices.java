@@ -10,12 +10,18 @@ public class NumberOfPrices implements Feature {
     private static List<String> prices = new ArrayList<String>() {
         {
             add("usd");
+            add("$");
             add("eur");
+            add("€");
             add("jpy");
+            add("¥");
             add("gbp");
+            add("£");
             add("chf");
-            add("cnh");
+            add("rub");
+            add("руб");
             add("sek");
+            add("kr");
         }
     };
     private int priceOccurrences;
@@ -28,10 +34,18 @@ public class NumberOfPrices implements Feature {
     public void extract(Article article) {
         List<String> text = article.getBody();
         text.forEach(word -> {
-            if (prices.contains(word)) {
-                priceOccurrences += 1;
-            }
+            checkOccurrence(word);
         });
+    }
+
+    private void checkOccurrence(String word) {
+        for (int i = 0; i < prices.size(); i++) {
+            String item = prices.get(i);
+            if (word.contains(item)) {
+                priceOccurrences += 1;
+                break;
+            }
+        }
     }
 
     @Override

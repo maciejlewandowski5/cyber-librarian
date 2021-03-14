@@ -1,5 +1,8 @@
 package dl.model;
 
 public enum MostFrequentFile {
-    MONTHS
+    MONTHS,
+    BUSINESS_ENTITY,
+    STOCK_EXCHANGE,
+    SEAS
 }
