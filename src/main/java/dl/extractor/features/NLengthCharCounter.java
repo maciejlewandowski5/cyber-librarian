@@ -18,8 +18,6 @@ public class NLengthCharCounter implements Feature {
     }
 
     public void clear(){
-        this.minimalLength = minimalLength;
-        this.maximalLength = maximalLength;
         numberOfWordsInWithSpecificLength = 0;
         result=0;
     }

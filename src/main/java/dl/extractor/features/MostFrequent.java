@@ -49,21 +49,22 @@ public class MostFrequent implements Feature {
         List<String> text = article.getBody();
         text.forEach(word -> {
             if (map.containsKey(word)) {
-                map.put(word, map.get(word) + 1);
+                Integer count = map.get(word);
+                map.put(word, count + 1);
             }
         });
     }
 
     @Override
-    public Object getFeature() {
+    public String getFeature() {
         if (map.isEmpty()){
-            return 0;
+            return "";
         }
-        return Integer.valueOf(Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey());
+        return Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey();
     }
 
     @Override
     public void clear() {
-        map = new HashMap<>();
+        map.forEach((k,v) ->map.put(k,0));
     }
 }
