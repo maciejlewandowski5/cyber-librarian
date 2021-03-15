@@ -22,7 +22,7 @@ public class App {
         MostFrequent mostFrequentMonth = new MostFrequent(MostFrequentFile.MONTHS);
         MostFrequent mostFrequentBusinessEntity = new MostFrequent(MostFrequentFile.BUSINESS_ENTITY);
         MostFrequent mostFrequentStockExchange = new MostFrequent(MostFrequentFile.STOCK_EXCHANGE);
-        MostFrequent mostFrequentSea = new MostFrequent(MostFrequentFile.SEAS);
+        MostFrequentPhrase mostFrequentSea = new MostFrequentPhrase(MostFrequentFile.SEAS);
         NumberOfPrices numberOfPrices = new NumberOfPrices();
         UniqueWordsNumber uniqueWordsNumber = new UniqueWordsNumber();
 

@@ -66,12 +66,16 @@ public class MostFrequentPhrase implements Feature {
     }
 
     @Override
-    public Object getFeature() {
+    public String getFeature() {
+        if (map.isEmpty()){
+            return "";
+        }
         String key = Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey();
         if (map.get(key) > 0) {
-            return phrases.indexOf(key) + 1;
+            return key;
+        } else {
+            return "";
         }
-        return 0;
     }
 
     @Override
