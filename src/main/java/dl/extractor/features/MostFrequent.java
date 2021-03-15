@@ -60,11 +60,12 @@ public class MostFrequent implements Feature {
         if (map.isEmpty()){
             return "";
         }
-        int maxValue = Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getValue();
-        if(maxValue==0){
+        String key = Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey();
+        if (map.get(key) == 0) {
             return "";
+        } else {
+            return key;
         }
-        return  Collections.max(map.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getKey();
     }
 
     @Override
