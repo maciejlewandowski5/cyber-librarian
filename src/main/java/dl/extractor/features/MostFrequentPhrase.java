@@ -52,12 +52,12 @@ public class MostFrequentPhrase implements Feature {
 
     @Override
     public void extract(Article article) {
-        String text = article.getBody().toString();
+        String preprocessedText = article.getPreProcessedBody();
 
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             int lastOccurrence = 0;
             while (lastOccurrence != -1) {
-                lastOccurrence = text.indexOf(entry.getKey(), lastOccurrence + 1);
+                lastOccurrence = preprocessedText.indexOf(entry.getKey(), lastOccurrence + 1);
                 if (lastOccurrence != -1) {
                     map.put(entry.getKey(), entry.getValue() + 1);
                 }
@@ -80,6 +80,6 @@ public class MostFrequentPhrase implements Feature {
 
     @Override
     public void clear() {
-        map = new HashMap<>();
+        map.forEach((k,v) ->map.put(k,0));
     }
 }

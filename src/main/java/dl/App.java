@@ -21,7 +21,7 @@ public class App {
         MostCommonYear mostCommonYear = new MostCommonYear();
         MostFrequent mostFrequentMonth = new MostFrequent(MostFrequentFile.MONTHS);
         MostFrequent mostFrequentBusinessEntity = new MostFrequent(MostFrequentFile.BUSINESS_ENTITY);
-        MostFrequent mostFrequentStockExchange = new MostFrequent(MostFrequentFile.STOCK_EXCHANGE);
+        MostFrequentPhrase mostFrequentStockExchange = new MostFrequentPhrase(MostFrequentFile.STOCK_EXCHANGE);
         MostFrequentPhrase mostFrequentSea = new MostFrequentPhrase(MostFrequentFile.SEAS);
         NumberOfPrices numberOfPrices = new NumberOfPrices();
         UniqueWordsNumber uniqueWordsNumber = new UniqueWordsNumber();
