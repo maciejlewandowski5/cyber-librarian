@@ -36,7 +36,8 @@ public class ArticlesLoader {
                 if (!title.isEmpty()) {
                     String places = element.select("PLACES").select("D").text();
                     List<String> body = processText(Arrays.asList(element.select("TEXT").text().split(" ")));
-                    Article article = new Article(title, places, body);
+                    String fullText = Stemmer.stemWord(element.select("TEXT").text().toLowerCase());
+                    Article article = new Article(title, places, body, fullText);
                     articles.add(article);
                 }
             }

@@ -26,10 +26,10 @@ public class MostFrequentPhraseTest {
                 "barrel.\n" +
                 "    \"We've been sitting back and waiting on two federal\n" +
                 "administrations to develop a coherent energy policy for the\n" +
-                "nation to follow. I coral sea we have waited long enough,\" Nugent";
-        Article newArticle = new Article("Coral Sea", "", Arrays.asList(text));
-        MostFrequentPhrase mostFrequentPhrase = new MostFrequentPhrase(MostFrequentFile.SEAS);
+                "nation to follow. I london, stock, exchange sea we have waited long enough,\" Nugent";
+        Article newArticle = new Article("Coral Sea", "",  Arrays.asList(text));
+        MostFrequentPhrase mostFrequentPhrase = new MostFrequentPhrase(MostFrequentFile.STOCK_EXCHANGE);
         mostFrequentPhrase.extract(newArticle);
-        assertEquals(9, mostFrequentPhrase.getFeature());
+        assertEquals("london stock exchang", mostFrequentPhrase.getFeature());
     }
 }
