@@ -35,10 +35,12 @@ public class ArticlesLoader {
                 String title = element.select("TITLE").text();
                 if (!title.isEmpty()) {
                     String places = element.select("PLACES").select("D").text();
-                    List<String> body = processText(Arrays.asList(element.select("TEXT").text().split(" ")));
-                    String fullText = Stemmer.stemWord(element.select("TEXT").text().toLowerCase());
-                    Article article = new Article(title, places, body, fullText);
-                    articles.add(article);
+                    if (places.matches("west-germany|usa|france|uk|canada|japan")) {
+                        List<String> body = processText(Arrays.asList(element.select("TEXT").text().split(" ")));
+                        String fullText = Stemmer.stemWord(element.select("TEXT").text().toLowerCase());
+                        Article article = new Article(title, places, body, fullText);
+                        articles.add(article);
+                    }
                 }
             }
         }

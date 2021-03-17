@@ -1,6 +1,7 @@
 package dl;
 
 import dl.extractor.features.*;
+import dl.knn.DatasetSplitter;
 import dl.knn.Knn;
 import dl.model.ExtractedArticle;
 import dl.model.MostFrequentFile;
@@ -10,6 +11,7 @@ import dl.parser.ArticlesLoader;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -53,6 +55,5 @@ public class App {
         for (ExtractedArticle n:knn.findKNearestNeighbours(extractedArticles.get(6))){
             System.out.println(n);
         }
-
     }
 }
