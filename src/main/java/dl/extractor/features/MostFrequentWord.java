@@ -12,14 +12,12 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
 
-public class MostFrequentPhrase extends MostFrequent {
-    private ArrayList<String> phrases;
+public class MostFrequentWord extends MostFrequent {
 
-    public MostFrequentPhrase (MostFrequentFile filenameEnum) {
+    public MostFrequentWord(MostFrequentFile filenameEnum) {
         String filename = checkFilename(filenameEnum);
 
         map = new HashMap<>();
-        phrases = new ArrayList<>();
         loadFile(filename);
     }
 
@@ -28,7 +26,6 @@ public class MostFrequentPhrase extends MostFrequent {
             lines.forEachOrdered(line -> {
                 line = Stemmer.stemWord(line.toLowerCase());
                 map.put(line, 0);
-                phrases.add(line);
             });
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,16 +34,12 @@ public class MostFrequentPhrase extends MostFrequent {
 
     @Override
     public void extract(Article article) {
-        String preprocessedText = article.getPreProcessedBody();
-
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            int lastOccurrence = 0;
-            while (lastOccurrence != -1) {
-                lastOccurrence = preprocessedText.indexOf(entry.getKey(), lastOccurrence + 1);
-                if (lastOccurrence != -1) {
-                    map.put(entry.getKey(), entry.getValue() + 1);
-                }
+        List<String> text = article.getBody();
+        text.forEach(word -> {
+            if (map.containsKey(word)) {
+                Integer count = map.get(word);
+                map.put(word, count + 1);
             }
-        }
+        });
     }
 }

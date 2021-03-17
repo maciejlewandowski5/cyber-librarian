@@ -19,8 +19,8 @@ public class App {
         NLengthCharCounter middleWords = new NLengthCharCounter(5, 8);
         NLengthCharCounter longWords = new NLengthCharCounter(9, Integer.MAX_VALUE);
         MostCommonYear mostCommonYear = new MostCommonYear();
-        MostFrequent mostFrequentMonth = new MostFrequent(MostFrequentFile.MONTHS);
-        MostFrequent mostFrequentBusinessEntity = new MostFrequent(MostFrequentFile.BUSINESS_ENTITY);
+        MostFrequentWord mostFrequentWordMonth = new MostFrequentWord(MostFrequentFile.MONTHS);
+        MostFrequentWord mostFrequentWordBusinessEntity = new MostFrequentWord(MostFrequentFile.BUSINESS_ENTITY);
         MostFrequentPhrase mostFrequentStockExchange = new MostFrequentPhrase(MostFrequentFile.STOCK_EXCHANGE);
         MostFrequentPhrase mostFrequentSea = new MostFrequentPhrase(MostFrequentFile.SEAS);
         NumberOfPrices numberOfPrices = new NumberOfPrices();
@@ -32,8 +32,8 @@ public class App {
         extractor.addFeature(middleWords);
         extractor.addFeature(longWords);
         extractor.addFeature(mostCommonYear);
-        extractor.addFeature(mostFrequentMonth);
-        extractor.addFeature(mostFrequentBusinessEntity);
+        extractor.addFeature(mostFrequentWordMonth);
+        extractor.addFeature(mostFrequentWordBusinessEntity);
         extractor.addFeature(mostFrequentStockExchange);
         extractor.addFeature(mostFrequentSea);
         extractor.addFeature(numberOfPrices);

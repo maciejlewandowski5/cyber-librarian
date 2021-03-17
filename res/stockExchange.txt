@@ -8,3 +8,4 @@ Euronext
 Deutsche Börse
 SIX Swiss Exchange
 Korea Exchange
+Canadian Stock Exchange
