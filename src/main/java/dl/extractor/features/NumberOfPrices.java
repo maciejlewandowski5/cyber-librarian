@@ -49,12 +49,17 @@ public class NumberOfPrices implements Feature {
     }
 
     @Override
-    public Object getFeature() {
+    public Integer getFeature() {
         return priceOccurrences;
     }
 
     @Override
     public void clear() {
         priceOccurrences = 0;
+    }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        return ((Integer)object1 - (Integer)object2)*((Integer)object1 - (Integer)object2);
     }
 }

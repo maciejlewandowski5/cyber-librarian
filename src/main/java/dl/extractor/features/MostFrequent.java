@@ -40,4 +40,9 @@ public abstract class MostFrequent implements Feature {
     public void clear() {
         map.forEach((k,v) ->map.put(k,0));
     }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        return ((String)object1).equals((String)object2)?1.0d:0.0;
+    }
 }

@@ -8,4 +8,6 @@ public interface Feature {
     Object getFeature();
 
     void clear();
+
+    double distance(Object object1, Object object2);
 }

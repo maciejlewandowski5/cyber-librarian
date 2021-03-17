@@ -1,12 +1,15 @@
 package dl;
 
 import dl.extractor.features.*;
+import dl.knn.Knn;
+import dl.model.ExtractedArticle;
 import dl.model.MostFrequentFile;
 import dl.extractor.Extractor;
 import dl.parser.Article;
 import dl.parser.ArticlesLoader;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -39,24 +42,16 @@ public class App {
         extractor.addFeature(numberOfPrices);
         extractor.addFeature(uniqueWordsNumber);
 
+        ArrayList<ExtractedArticle> extractedArticles = new ArrayList<>();
+
         for (Article a : articlesLoader.getArticles()) {
-            System.out.println(a);
             extractor.clear();
             extractor.extract(a);
-            if (extractor.getFeature(1) != null) {
-                System.out.println(extractor.getFeature(0));
-                System.out.println(extractor.getFeature(1));
-                System.out.println(extractor.getFeature(2));
-                System.out.println(extractor.getFeature(3));
-                System.out.println(extractor.getFeature(4));
-                System.out.println(extractor.getFeature(5));
-                System.out.println(extractor.getFeature(6));
-                System.out.println(extractor.getFeature(7));
-                System.out.println(extractor.getFeature(8));
-                System.out.println(extractor.getFeature(9));
-                System.out.println(extractor.getFeature(10));
-                System.out.println(extractor.getFeature(11));
-            }
+            extractedArticles.add(new ExtractedArticle(extractor.getFeaturesValues()));
+        }
+        Knn knn = new Knn(15,extractedArticles,extractor);
+        for (ExtractedArticle n:knn.findKNearestNeighbours(extractedArticles.get(6))){
+            System.out.println(n);
         }
 
     }

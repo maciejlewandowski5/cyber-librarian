@@ -104,4 +104,20 @@ public class UnitType implements Feature {
         numberOfImperialUnits =0;
         numberOfSiUnits=0;
     }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        Float o1 = (Float)object1;
+        Float o2 = (Float)object2;
+        if(o1==1){
+            return o2;
+        }else if(o1==0.5){
+            return Math.abs(o2-o1);
+        }else if(o1==0){
+            return Math.abs(o2-1.0);
+        }else{
+            return 0;
+        }
+
+    }
 }

@@ -41,4 +41,9 @@ public class MostCommonYear implements Feature {
     public void clear() {
         years = new HashMap<>();
     }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        return ((Integer)object1 - (Integer)object2)*((Integer)object1 - (Integer)object2);
+    }
 }

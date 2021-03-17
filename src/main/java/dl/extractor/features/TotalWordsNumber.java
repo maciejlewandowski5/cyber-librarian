@@ -25,4 +25,9 @@ public class TotalWordsNumber implements Feature {
     public void clear() {
         size=0;
     }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        return ((Integer)object1 - (Integer)object2)*((Integer)object1 - (Integer)object2);
+    }
 }

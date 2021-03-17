@@ -8,19 +8,25 @@ public class NLengthCharCounter implements Feature {
     int minimalLength;
     int maximalLength;
     int numberOfWordsInWithSpecificLength;
-    float result;
+    Double result;
 
     public NLengthCharCounter(int minimalLength, int maximalLength) {
         this.minimalLength = minimalLength;
         this.maximalLength = maximalLength;
         numberOfWordsInWithSpecificLength = 0;
-        result=0;
+        result=0d;
     }
 
     public void clear(){
         numberOfWordsInWithSpecificLength = 0;
-        result=0;
+        result=0d;
     }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        return ((Double)object1 - (Double)object2)*((Double)object1 - (Double)object2);
+    }
+
     @Override
     public void extract(Article article) {
         article.getBody().forEach(word -> {
@@ -28,11 +34,11 @@ public class NLengthCharCounter implements Feature {
                 numberOfWordsInWithSpecificLength++;
             }
         });
-        result=numberOfWordsInWithSpecificLength/(float)article.getBody().size();
+        result=numberOfWordsInWithSpecificLength/(double)article.getBody().size();
     }
 
     @Override
-    public Float getFeature() {
+    public Double getFeature() {
         return result;
     }
 }

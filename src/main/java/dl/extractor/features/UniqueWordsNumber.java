@@ -25,12 +25,17 @@ public class UniqueWordsNumber implements Feature {
     }
 
     @Override
-    public Object getFeature() {
+    public Integer getFeature() {
         return words.size();
     }
 
     @Override
     public void clear() {
         words = new HashSet<>();
+    }
+
+    @Override
+    public double distance(Object object1, Object object2) {
+        return ((Integer)object1 - (Integer)object2);
     }
 }
