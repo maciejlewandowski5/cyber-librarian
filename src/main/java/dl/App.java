@@ -3,6 +3,7 @@ package dl;
 import dl.extractor.features.*;
 import dl.knn.DatasetSplitter;
 import dl.knn.Knn;
+import dl.utils.MostFrequentCountry;
 import dl.model.ExtractedArticle;
 import dl.model.MostFrequentFile;
 import dl.extractor.Extractor;
@@ -11,7 +12,6 @@ import dl.parser.ArticlesLoader;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -49,11 +49,21 @@ public class App {
         for (Article a : articlesLoader.getArticles()) {
             extractor.clear();
             extractor.extract(a);
-            extractedArticles.add(new ExtractedArticle(extractor.getFeaturesValues()));
+            extractedArticles.add(new ExtractedArticle(extractor.getFeaturesValues(), a.getPlaces()));
         }
-        Knn knn = new Knn(15,extractedArticles,extractor);
-        for (ExtractedArticle n:knn.findKNearestNeighbours(extractedArticles.get(6))){
-            System.out.println(n);
+
+        ArrayList<ArrayList> splitData = DatasetSplitter.splitData(extractedArticles, 60);
+        ArrayList<ExtractedArticle> classifiedSet = splitData.get(0);
+        ArrayList<ExtractedArticle> learningSet = splitData.get(1);
+
+        Knn knn = new Knn(15,classifiedSet,extractor);
+
+        for (int i = 0; i < learningSet.size(); i++) {
+            ExtractedArticle extractedArticle = learningSet.get(i);
+            //System.out.println(extractedArticle);
+            ArrayList<ExtractedArticle> kNearestNeighbours = knn.findKNearestNeighbours(extractedArticle);
+            String mostFrequentCountry = MostFrequentCountry.getMostFrequentCountry(kNearestNeighbours);
+            System.out.println("Real country: " + extractedArticle.getCountry() + " classified country: " + mostFrequentCountry);
         }
     }
 }
