@@ -2,8 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{listings}
+\usepackage{graphicx}
 
-
+\graphicspath{ {../uml/} }
 
 \studycycle{Informatyka, studia STACJONARNE, I st.}
 \coursesemester{VI}
@@ -75,7 +76,7 @@ Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podo
 %\item w pętli $q$ przyporządkuj elementowi tablicy $fun[tab[i][2]]$ element tablicy $fun[tab[i][2]]+1$
 %\item zakończ pętlę $q$
 %\item przyporządkuj zmiennej $rec$ wynik funkcji $pointmax(fun)$
-\end{enumerate}
+%\end{enumerate}
 \indent Algorytm jako dane wejściowe pobiera obiekt do klasyfikacji $obj$ oraz zmienną przechowującą informacje o klasie do którego zostanie przyporządkowany $rec$.Odległość dwóch obiektów określana jest poprzez określoną metrykę. Porównywane będą wektory cech reprezentujące obiekty.
 
 
@@ -210,17 +211,10 @@ Czułość wyraża się wzorem:
 TPR=\frac{\Sigma TP}{\Sigma TP + \Sigma FN} \label{eq:eps}
 \end{equation}
 \subsubsection{F1}
+Miarę F1 wyraża się wzorem:
 \begin{equation}
 TPR=2*\frac{PPV*TPR}{PPV + TPR} \label{eq:eps}
 \end{equation}
-Miary jakości klasyfikacji (Accuracy, Precision,
-Recall, F1). We wprowadzeniu zaprezentować minimum teorii potrzebnej do realizacji
-zadania, tak by inżynier innej specjalności zrozumiał dalszy opis.\\
-\indent Stosowane wzory, oznaczenia z objaśnieniami znaczenia symboli użytych w
-doświadczeniu. Oznaczenia jednolite w obrębie całego sprawozdania.  Opis zawiera przypisy do bibliografii zgodnie z
-Polską Normą, (zob. materiały BG PŁ).\\
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 03 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
 
 
 \section{Klasyfikacja z użyciem metryk i miar podobieństwa tekstów}
@@ -234,10 +228,21 @@ na WIKAMP KSR.}
 
 \section{Budowa aplikacji}
 \subsection{Diagramy UML}
-Diagramy UML i zwięzłe opisy: idei aplikacji, modułu ekstrakcji i modułu
-klasyfikatora.\\
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 03 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
+Aplikacja złożona jest z komponentów: extractor, features, knn, main, model, parser, utils
+\subsubsection{extractor}
+\includegraphics[scale=0.5]{Package extractor}
+\subsubsection{features}
+\includegraphics[scale=0.5]{Package features}
+\subsubsection{knn}
+\includegraphics[scale=0.5]{Package knn}
+\subsubsection{main}
+\includegraphics[scale=0.5]{Package main}
+\subsubsection{model}
+\includegraphics[scale=0.5]{Package model}
+\subsubsection{parser}
+\includegraphics[scale=0.5]{Package parser}
+\subsubsection{utils}
+\includegraphics[scale=0.5]{Package utils}
 
 \subsection{Prezentacja wyników, interfejs użytkownika} 
 Krótki ilustrowany opis jak użytkownik może korzystać z aplikacji, w~szczególności wprowadzać parametry klasyfikacji i odczytywać wyniki. Wersja JRE i inne wymogi

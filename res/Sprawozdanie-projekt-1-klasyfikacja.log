@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  20 MAR 2021 08:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  20 MAR 2021 08:50
 entering extended mode
 **./Sprawozdanie-projekt-1-klasyfikacja.tex
 (Sprawozdanie-projekt-1-klasyfikacja.tex
@@ -81,9 +81,27 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
+)
 LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 2
-3.
-(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
+4.
+ (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
@@ -128,74 +146,89 @@ LaTeX Warning: Label `eq:eps' multiply defined.
 
 LaTeX Warning: Label `eq:eps' multiply defined.
 
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
 )
 \openout1 = `Sprawozdanie-projekt-1-klasyfikacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count196
-\scratchdimen=\dimen144
+\scratchdimen=\dimen146
 \scratchbox=\box50
 \nofMPsegments=\count197
 \nofMParguments=\count198
 \everyMPshowfont=\toks19
 \MPscratchCnt=\count199
-\MPscratchDim=\dimen145
+\MPscratchDim=\dimen147
 \MPnumerator=\count266
 \makeMPintoPDFobject=\count267
 \everyMPtoPDFconversion=\toks20
 )
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
 \c@lstlisting=\count268
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 24.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 24.
+(Font)              <6> on input line 25.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
 
  []
 
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-24.
+25.
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Overfull \hbox (4.01257pt too wide) in paragraph at lines 26--31
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 27--32
 \OT4/cmr/m/n/12 daw-cze-go-/do-±wiad-czal-ne-go-/o-bli-cze-nio-we-go (wg in-dy-
 wi-du-al-nych po-trzeb zwi°-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 36.
+(Font)              <14.4> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
+(Font)              <7> on input line 37.
 ! Undefined control sequence.
-l.37 ...onych w przestrzeni cech. Jak podaje \cyte
+l.38 ...onych w przestrzeni cech. Jak podaje \cyte
                                                   {tadeusiewicz90} za≈Ço≈ºen...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -204,7 +237,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.49 ...ci jest maksymalna. Algorytm wed≈Çug \cyte
+l.50 ...ci jest maksymalna. Algorytm wed≈Çug \cyte
                                                   {tadeusiewicz90} sk≈Çada s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -213,72 +246,112 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--51
+Underfull \hbox (badness 10000) in paragraph at lines 38--52
 
  []
 
 [1
 
-{C:/Users/macie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+{C:/Users/macie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
+[4]
+<../uml//Package extractor.png, id=23, 372.39125pt x 475.7775pt>
+File: ../uml//Package extractor.png Graphic file (type png)
+<use ../uml//Package extractor.png>
+Package pdftex.def Info: ../uml//Package extractor.png  used on input line 233.
 
-! LaTeX Error: \begin{document} ended by \end{enumerate}.
+(pdftex.def)             Requested size: 186.19516pt x 237.88815pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78 \end{enumerate}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.78 \end{enumerate}
-                    
-Things are pretty mixed up, but I think the worst is over.
+ [5]
+<../uml//Package features.png, id=27, 783.92876pt x 745.78625pt>
+File: ../uml//Package features.png Graphic file (type png)
+<use ../uml//Package features.png>
+Package pdftex.def Info: ../uml//Package features.png  used on input line 235.
+(pdftex.def)             Requested size: 391.96342pt x 372.89221pt.
 
-[2] [3] [4]
-Overfull \hbox (3.55147pt too wide) in paragraph at lines 243--247
+Overfull \hbox (19.58824pt too wide) in paragraph at lines 235--236
+[][] 
+ []
+
+<../uml//Package knn.png, id=28, 459.7175pt x 361.35pt>
+File: ../uml//Package knn.png Graphic file (type png)
+<use ../uml//Package knn.png>
+Package pdftex.def Info: ../uml//Package knn.png  used on input line 237.
+(pdftex.def)             Requested size: 229.85818pt x 180.67456pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <../uml//Package extractor.png (PNG copy)> <../uml//Package features.png (P
+NG copy)>]
+<../uml//Package main.png, id=32, 520.94624pt x 357.335pt>
+File: ../uml//Package main.png Graphic file (type png)
+<use ../uml//Package main.png>
+Package pdftex.def Info: ../uml//Package main.png  used on input line 239.
+(pdftex.def)             Requested size: 260.47249pt x 178.66705pt.
+<../uml//Package model.png, id=33, 318.18875pt x 373.395pt>
+File: ../uml//Package model.png Graphic file (type png)
+<use ../uml//Package model.png>
+Package pdftex.def Info: ../uml//Package model.png  used on input line 241.
+(pdftex.def)             Requested size: 159.09398pt x 186.69704pt.
+<../uml//Package parser.png, id=34, 471.7625pt x 450.68375pt>
+File: ../uml//Package parser.png Graphic file (type png)
+<use ../uml//Package parser.png>
+Package pdftex.def Info: ../uml//Package parser.png  used on input line 243.
+(pdftex.def)             Requested size: 235.88066pt x 225.34131pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <../uml//Package knn.png (PNG copy)> <../uml//Package main.png (PNG copy)> 
+<../uml//Package model.png (PNG copy)>]
+<../uml//Package utils.png, id=39, 411.5375pt x 94.3525pt>
+File: ../uml//Package utils.png Graphic file (type png)
+<use ../uml//Package utils.png>
+Package pdftex.def Info: ../uml//Package utils.png  used on input line 245.
+(pdftex.def)             Requested size: 205.76825pt x 47.17612pt.
+
+Overfull \hbox (3.55147pt too wide) in paragraph at lines 248--252
 []\OT4/cmr/m/n/12 KrÛtki ilu-stro-wa-ny opis jak uªyt-kow-nik mo-ªe ko-rzy-sta¢
  z apli-ka-cji, w szcze-
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 249--252
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--255
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--269
+Underfull \hbox (badness 10000) in paragraph at lines 266--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \vbox (badness 1910) has occurred while \output is active []
+
+ [8 <../uml//Package parser.png (PNG copy)> <../uml//Package utils.png (PNG cop
+y)>]
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
 
-[6] [7] (Sprawozdanie-projekt-1-klasyfikacja.aux)
+[9] (Sprawozdanie-projekt-1-klasyfikacja.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2798 strings out of 479334
- 41541 string characters out of 2857085
- 333822 words of memory out of 3000000
- 20265 multiletter control sequences out of 15000+200000
+ 3124 strings out of 479334
+ 46943 string characters out of 2857085
+ 338637 words of memory out of 3000000
+ 20564 multiletter control sequences out of 15000+200000
  410974 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,7n,73p,448b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,7n,74p,448b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:
 /Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}<C:/User
 s/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
@@ -292,10 +365,10 @@ fonts/type1/public/pl/plr10.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/pl/plr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/pl/plr17.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/pl/pltt12.pfb>
-Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (7 pages, 135744 byte
+Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (9 pages, 249518 byte
 s).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
