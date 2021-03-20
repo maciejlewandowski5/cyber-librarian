@@ -1,6 +1,9 @@
 \documentclass{classrep}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
+\usepackage{listings}
+
+
 
 \studycycle{Informatyka, studia STACJONARNE, I st.}
 \coursesemester{VI}
@@ -44,17 +47,34 @@ Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podo
 \newline $sort(tab)$ - funkcja sortująca tablicę
 \newline $fun[1..numclass]$ - tabela wartości funkcji przynależności
 \newline $pointmax(fun)$  - funkcja wskazująca numer klasy, dla której wartość przynależności jest maksymalna. Algorytm według \cyte{tadeusiewicz90} składa się z następujących kroków:
-\begin{enumerate}
-\item wyzeruj tablicę $fun$
-\item wykonaj pętlę $s$ od $i=1$ do $num$
-\item w pętli $s$ przyporządkuj elementowi tablicy $tab[i][1]$ wynik wywołania funkcji $dist(sampl[i],obj)$
-\item w pętli $s$ przyporządkuj elementowi tablicy $tab[i][2]$ element tablicy $sampl[i][dim+1]$
-\item zakończ pętlę $s$
-\item wykonaj sortowanie tablicy $sort(tab)$
-\item rozpocznij pętlę $q$ od $i=1$ do $i=k$
-\item w pętli $q$ przyporządkuj elementowi tablicy $fun[tab[i][2]]$ element tablicy $fun[tab[i][2]]+1$
-\item zakończ pętlę $q$
-\item przyporządkuj zmiennej $rec$ wynik funkcji $pointmax(fun)$
+\newline
+\begin{verbatim}
+ 1.  wyzeruj tablicę fun
+ 2.  wykonaj pętlę s od i=1 do num
+ 3.  w pętli s przyporządkuj elementowi tablicy tab[i][1]
+     wynik wywołania funkcji dist(sampl[i],obj)
+ 4.  w pętli s przyporządkuj elementowi tablicy tab[i][2]
+     element tablicy sampl[i][dim+1]
+ 5.  zakończ pętlę s
+ 6.  wykonaj sortowanie tablicy sort(tab)
+ 7.  rozpocznij pętlę q od i=1 do i=k
+ 8.  w pętli q przyporządkuj elementowi tablicy fun[tab[i][2]]
+     element tablicy fun[tab[i][2]]+1
+ 9.  zakończ pętlę q
+ 10. przyporządkuj zmiennej rec wynik funkcji pointmax(fun)
+\end{verbatim}
+
+%\begin{enumerate}
+%\item wyzeruj tablicę $fun$
+%\item wykonaj pętlę $s$ od $i=1$ do $num$
+%\item w pętli $s$ przyporządkuj elementowi tablicy $tab[i][1]$ wynik wywołania funkcji $dist(sampl[i],obj)$
+%\item w pętli $s$ przyporządkuj elementowi tablicy $tab[i][2]$ element tablicy $sampl[i][dim+1]$
+%\item zakończ pętlę $s$
+%\item wykonaj sortowanie tablicy $sort(tab)$
+%\item rozpocznij pętlę $q$ od $i=1$ do $i=k$
+%\item w pętli $q$ przyporządkuj elementowi tablicy $fun[tab[i][2]]$ element tablicy $fun[tab[i][2]]+1$
+%\item zakończ pętlę $q$
+%\item przyporządkuj zmiennej $rec$ wynik funkcji $pointmax(fun)$
 \end{enumerate}
 \indent Algorytm jako dane wejściowe pobiera obiekt do klasyfikacji $obj$ oraz zmienną przechowującą informacje o klasie do którego zostanie przyporządkowany $rec$.Odległość dwóch obiektów określana jest poprzez określoną metrykę. Porównywane będą wektory cech reprezentujące obiekty.
 
@@ -116,9 +136,9 @@ v_{6}={f(max(k(A,G_M)))}\label{eq:eps}
 \newline $G_M = [x_1,x_2,x_3,. . . , x_j]$ wektor słów kluczowych nazw mórz i oceanów
 
 
-\item Względna ilość słów o długości do n znaków
+\item Względna ilość słów o długości do 4 znaków
 \begin{equation}
-v_{7}=\frac{c(A,0,n)}{v_1}\label{eq:eps}
+v_{7}=\frac{c(A,0,4)}{v_1}\label{eq:eps}
 \end{equation}
 ,gdzie
 \newline $c:\mathcal{A},N,M\rightarrow P$ c jest funkcją zliczającą ilość słów o długości od n do m znaków
@@ -126,15 +146,15 @@ v_{7}=\frac{c(A,0,n)}{v_1}\label{eq:eps}
 \newline $M = \{m:m\in\mathrm{N} \land m>n\}$
 \newline $P = \{p:p\in\mathrm{N}\}$
 
-\item Względna ilość słów o długości od n do m znaków
+\item Względna ilość słów o długości od 4 do 8 znaków
 \begin{equation}
-v_{8}=\frac{c(A,n,m)}{v_1}\label{eq:eps}
+v_{8}=\frac{c(A,4,8)}{v_1}\label{eq:eps}
 \end{equation}
 
 
-\item Względna ilość słów o długości od m znaków
+\item Względna ilość słów o długości od 8 znaków
 \begin{equation}
-v_{9}=\frac{c(A,m,\infty)}{v_1}\label{eq:eps}
+v_{9}=\frac{c(A,8,\infty)}{v_1}\label{eq:eps}
 \end{equation}
 
 \item Najczęściej występujący rok w artykule
@@ -161,7 +181,38 @@ v_{12}=us(A)\label{eq:eps}
 \newline $us:\mathcal{A}\rightarrow\mathcal{P}$, $yr$ to funkcja zwracająca ilość różnych słów w tekście
 \end{enumerate}
 
-\subsection{Miary jakości klasyfikacji} 
+\subsection{Miary jakości klasyfikacji}
+Celem miar jakości klasyfikacji jest zbadanie dokonanej klasyfikacji. Ze względu na brak miary idealnej posłużymy się paroma następującymi miarami:
+\begin{enumerate}
+\item{accuracy}
+\item{precision}
+\item{recall}
+\item{F1}
+\end{enumerate}
+Do wyznaczenia miar jakości klasyfikacji korzystamy z tablicy pomyłek. Spis oznaczeń:
+\newline $TP$ - prawdziwie pozytywna klasyfikacja
+\newline $FP$ - fałszywie pozytywna klasyfikacja
+\newline $FN$ - fałszywie negatywna klasyfikacja
+\newline $TN$ - prawdziwie negatywna klasyfikacja
+\subsubsection{Accuracy}
+Dokładność wyraża się wzorem:
+\begin{equation}
+ACC=\frac{\Sigma TP}{\Sigma populacja} \label{eq:eps}
+\end{equation}
+\subsubsection{Precision}
+Precyzja wyraża się wzorem:
+\begin{equation}
+PPV=\frac{\Sigma TP}{\Sigma TP + \Sigma FP} \label{eq:eps}
+\end{equation}
+\subsubsection{Recall}
+Czułość wyraża się wzorem:
+\begin{equation}
+TPR=\frac{\Sigma TP}{\Sigma TP + \Sigma FN} \label{eq:eps}
+\end{equation}
+\subsubsection{F1}
+\begin{equation}
+TPR=2*\frac{PPV*TPR}{PPV + TPR} \label{eq:eps}
+\end{equation}
 Miary jakości klasyfikacji (Accuracy, Precision,
 Recall, F1). We wprowadzeniu zaprezentować minimum teorii potrzebnej do realizacji
 zadania, tak by inżynier innej specjalności zrozumiał dalszy opis.\\

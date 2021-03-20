@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  14 MAR 2021 10:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  20 MAR 2021 08:35
 entering extended mode
 **./Sprawozdanie-projekt-1-klasyfikacja.tex
 (Sprawozdanie-projekt-1-klasyfikacja.tex
@@ -53,17 +53,48 @@ Package color Info: Driver file: pdftex.def on input line 147.
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\lst@mode=\count187
+\lst@gtempboxa=\box47
+\lst@token=\toks18
+\lst@length=\count188
+\lst@currlwidth=\dimen140
+\lst@column=\count189
+\lst@pos=\count190
+\lst@lostspace=\dimen141
+\lst@width=\dimen142
+\lst@newlines=\count191
+\lst@lineno=\count192
+\lst@maxwidth=\dimen143
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count193
+\lst@skipnumbers=\count194
+\lst@framebox=\box48
+)
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 2
-0.
- (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
+3.
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count187
-\l__pdf_internal_box=\box47
+\l__color_backend_stack_int=\count195
+\l__pdf_internal_box=\box49
 ) (Sprawozdanie-projekt-1-klasyfikacja.aux
+
+LaTeX Warning: Label `eq:eps' multiply defined.
+
 
 LaTeX Warning: Label `eq:eps' multiply defined.
 
@@ -100,69 +131,71 @@ LaTeX Warning: Label `eq:eps' multiply defined.
 )
 \openout1 = `Sprawozdanie-projekt-1-klasyfikacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count188
-\scratchdimen=\dimen140
-\scratchbox=\box48
-\nofMPsegments=\count189
-\nofMParguments=\count190
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count191
-\MPscratchDim=\dimen141
-\MPnumerator=\count192
-\makeMPintoPDFobject=\count193
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count196
+\scratchdimen=\dimen144
+\scratchbox=\box50
+\nofMPsegments=\count197
+\nofMParguments=\count198
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen145
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
+\everyMPtoPDFconversion=\toks20
 )
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\c@lstlisting=\count268
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
+(Font)              <6> on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 
  []
 
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-21.
+24.
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Overfull \hbox (4.01257pt too wide) in paragraph at lines 23--28
-\OT4/cmr/m/n/12 daw-cze-go/do±wiadczalnego/obliczeniowego (wg in-dy-wi-du-al-ny
-ch po-trzeb zwi°-
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 26--31
+\OT4/cmr/m/n/12 daw-cze-go-/do-±wiad-czal-ne-go-/o-bli-cze-nio-we-go (wg in-dy-
+wi-du-al-nych po-trzeb zwi°-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 33.
+(Font)              <14.4> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 36.
 ! Undefined control sequence.
-l.34 ...onych w przestrzeni cech. Jak podaje \cyte
+l.37 ...onych w przestrzeni cech. Jak podaje \cyte
                                                   {tadeusiewicz90} za≈Ço≈ºen...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -171,7 +204,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.46 ...ci jest maksymalna. Algorytm wed≈Çug \cyte
+l.49 ...ci jest maksymalna. Algorytm wed≈Çug \cyte
                                                   {tadeusiewicz90} sk≈Çada s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -179,71 +212,90 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--51
+
+ []
+
 [1
 
 {C:/Users/macie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Overfull \hbox (41.52922pt too wide) in paragraph at lines 51--52
-[]\OT4/cmr/m/n/12 w p¶-tli $\OML/cmm/m/it/12 s$ \OT4/cmr/m/n/12 przy-po-rz°d-ku
-j ele-men-to-wi ta-bli-cy $\OML/cmm/m/it/12 tab\OT1/cmr/m/n/12 [\OML/cmm/m/it/1
-2 i\OT1/cmr/m/n/12 ][2]$ \OT4/cmr/m/n/12 ele-ment ta-bli-cy $\OML/cmm/m/it/12 s
-ampl\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 i\OT1/cmr/m/n/12 ][\OML/cmm/m/it/12 dim \
-OT1/cmr/m/n/12 +
- []
+
+! LaTeX Error: \begin{document} ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \end{enumerate}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.78 \end{enumerate}
+                    
+Things are pretty mixed up, but I think the worst is over.
 
 [2] [3] [4]
-Overfull \hbox (3.55147pt too wide) in paragraph at lines 192--196
+Overfull \hbox (3.55147pt too wide) in paragraph at lines 243--247
 []\OT4/cmr/m/n/12 KrÛtki ilu-stro-wa-ny opis jak uªyt-kow-nik mo-ªe ko-rzy-sta¢
  z apli-ka-cji, w szcze-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 249--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--218
+Underfull \hbox (badness 10000) in paragraph at lines 253--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
+Underfull \hbox (badness 10000) in paragraph at lines 261--269
 
  []
 
-[5] [6] (Sprawozdanie-projekt-1-klasyfikacja.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--272
+
+ []
+
+[6] [7] (Sprawozdanie-projekt-1-klasyfikacja.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1441 strings out of 479334
- 21975 string characters out of 2857085
- 312820 words of memory out of 3000000
- 18923 multiletter control sequences out of 15000+200000
+ 2798 strings out of 479334
+ 41541 string characters out of 2857085
+ 333822 words of memory out of 3000000
+ 20265 multiletter control sequences out of 15000+200000
  410974 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,7n,73p,448b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}<C:
-/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/macie/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/pl/plbx12.pfb><C:/Users/macie/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/pl/plr10.pfb><C:/Users/macie/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/pl/plr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/pl/plr17.pfb>
-Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (6 pages, 120479 byte
+ 63i,7n,73p,448b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:
+/Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}<C:/User
+s/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/pl/plbx12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/pl/plr10.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/pl/plr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/pl/plr17.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/pl/pltt12.pfb>
+Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (7 pages, 135744 byte
 s).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
