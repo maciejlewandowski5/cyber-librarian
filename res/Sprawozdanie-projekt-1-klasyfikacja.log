@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  20 MAR 2021 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  20 MAR 2021 09:07
 entering extended mode
 **./Sprawozdanie-projekt-1-klasyfikacja.tex
 (Sprawozdanie-projekt-1-klasyfikacja.tex
@@ -254,101 +254,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--52
 
 {C:/Users/macie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
 [4]
-<../uml//Package extractor.png, id=23, 372.39125pt x 475.7775pt>
-File: ../uml//Package extractor.png Graphic file (type png)
-<use ../uml//Package extractor.png>
-Package pdftex.def Info: ../uml//Package extractor.png  used on input line 233.
+<../uml//App structure.png, id=23, 1177.39874pt x 526.96875pt>
+File: ../uml//App structure.png Graphic file (type png)
+<use ../uml//App structure.png>
+Package pdftex.def Info: ../uml//App structure.png  used on input line 233.
+(pdftex.def)             Requested size: 412.09573pt x 184.44182pt.
 
-(pdftex.def)             Requested size: 186.19516pt x 237.88815pt.
+Overfull \hbox (39.72055pt too wide) in paragraph at lines 233--234
+[][] 
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-<../uml//Package features.png, id=27, 783.92876pt x 745.78625pt>
+<../uml//Package extractor.png, id=27, 372.39125pt x 475.7775pt>
+File: ../uml//Package extractor.png Graphic file (type png)
+<use ../uml//Package extractor.png>
+Package pdftex.def Info: ../uml//Package extractor.png  used on input line 235.
+
+(pdftex.def)             Requested size: 186.19516pt x 237.88815pt.
+<../uml//Features structure.png, id=28, 2128.95375pt x 361.35pt>
+File: ../uml//Features structure.png Graphic file (type png)
+<use ../uml//Features structure.png>
+Package pdftex.def Info: ../uml//Features structure.png  used on input line 237
+.
+(pdftex.def)             Requested size: 425.78322pt x 72.2687pt.
+<../uml//Package features.png, id=29, 783.92876pt x 745.78625pt>
 File: ../uml//Package features.png Graphic file (type png)
 <use ../uml//Package features.png>
-Package pdftex.def Info: ../uml//Package features.png  used on input line 235.
+Package pdftex.def Info: ../uml//Package features.png  used on input line 239.
 (pdftex.def)             Requested size: 391.96342pt x 372.89221pt.
 
-Overfull \hbox (19.58824pt too wide) in paragraph at lines 235--236
+Overfull \hbox (53.40804pt too wide) in paragraph at lines 237--240
 [][] 
  []
 
-<../uml//Package knn.png, id=28, 459.7175pt x 361.35pt>
+
+Overfull \hbox (1.96342pt too wide) in paragraph at lines 237--240
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <../uml//App structure.png (PNG copy)> <../uml//Package extractor.png (PNG 
+copy)>]
+<../uml//Package knn.png, id=33, 459.7175pt x 361.35pt>
 File: ../uml//Package knn.png Graphic file (type png)
 <use ../uml//Package knn.png>
-Package pdftex.def Info: ../uml//Package knn.png  used on input line 237.
+Package pdftex.def Info: ../uml//Package knn.png  used on input line 241.
 (pdftex.def)             Requested size: 229.85818pt x 180.67456pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <../uml//Package extractor.png (PNG copy)> <../uml//Package features.png (P
-NG copy)>]
-<../uml//Package main.png, id=32, 520.94624pt x 357.335pt>
+<../uml//Package main.png, id=34, 520.94624pt x 357.335pt>
 File: ../uml//Package main.png Graphic file (type png)
 <use ../uml//Package main.png>
-Package pdftex.def Info: ../uml//Package main.png  used on input line 239.
+Package pdftex.def Info: ../uml//Package main.png  used on input line 243.
 (pdftex.def)             Requested size: 260.47249pt x 178.66705pt.
-<../uml//Package model.png, id=33, 318.18875pt x 373.395pt>
-File: ../uml//Package model.png Graphic file (type png)
-<use ../uml//Package model.png>
-Package pdftex.def Info: ../uml//Package model.png  used on input line 241.
-(pdftex.def)             Requested size: 159.09398pt x 186.69704pt.
-<../uml//Package parser.png, id=34, 471.7625pt x 450.68375pt>
-File: ../uml//Package parser.png Graphic file (type png)
-<use ../uml//Package parser.png>
-Package pdftex.def Info: ../uml//Package parser.png  used on input line 243.
-(pdftex.def)             Requested size: 235.88066pt x 225.34131pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <../uml//Package knn.png (PNG copy)> <../uml//Package main.png (PNG copy)> 
-<../uml//Package model.png (PNG copy)>]
-<../uml//Package utils.png, id=39, 411.5375pt x 94.3525pt>
+ [7 <../uml//Features structure.png (PNG copy)> <../uml//Package features.png (
+PNG copy)> <../uml//Package knn.png (PNG copy)>]
+<../uml//Package model.png, id=39, 318.18875pt x 373.395pt>
+File: ../uml//Package model.png Graphic file (type png)
+<use ../uml//Package model.png>
+Package pdftex.def Info: ../uml//Package model.png  used on input line 245.
+(pdftex.def)             Requested size: 159.09398pt x 186.69704pt.
+<../uml//Package parser.png, id=40, 471.7625pt x 450.68375pt>
+File: ../uml//Package parser.png Graphic file (type png)
+<use ../uml//Package parser.png>
+Package pdftex.def Info: ../uml//Package parser.png  used on input line 247.
+(pdftex.def)             Requested size: 235.88066pt x 225.34131pt.
+<../uml//Package utils.png, id=41, 411.5375pt x 94.3525pt>
 File: ../uml//Package utils.png Graphic file (type png)
 <use ../uml//Package utils.png>
-Package pdftex.def Info: ../uml//Package utils.png  used on input line 245.
+Package pdftex.def Info: ../uml//Package utils.png  used on input line 249.
 (pdftex.def)             Requested size: 205.76825pt x 47.17612pt.
 
-Overfull \hbox (3.55147pt too wide) in paragraph at lines 248--252
+Underfull \vbox (badness 4254) has occurred while \output is active []
+
+ [8 <../uml//Package main.png (PNG copy)> <../uml//Package model.png (PNG copy)
+> <../uml//Package parser.png (PNG copy)>]
+Overfull \hbox (3.55147pt too wide) in paragraph at lines 252--256
 []\OT4/cmr/m/n/12 Krótki ilu-stro-wa-ny opis jak u»yt-kow-nik mo-»e ko-rzy-sta¢
  z apli-ka-cji, w szcze-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 258--261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--274
+Underfull \hbox (badness 10000) in paragraph at lines 270--278
 
  []
 
 
-Underfull \vbox (badness 1910) has occurred while \output is active []
-
- [8 <../uml//Package parser.png (PNG copy)> <../uml//Package utils.png (PNG cop
-y)>]
-Underfull \hbox (badness 10000) in paragraph at lines 275--277
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
-[9] (Sprawozdanie-projekt-1-klasyfikacja.aux)
+
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+ [9 <../uml//Package utils.png (PNG copy)>] [10] (Sprawozdanie-projekt-1-klasyf
+ikacja.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3124 strings out of 479334
- 46943 string characters out of 2857085
+ 3140 strings out of 479334
+ 47369 string characters out of 2857085
  338637 words of memory out of 3000000
- 20564 multiletter control sequences out of 15000+200000
+ 20578 multiletter control sequences out of 15000+200000
  410974 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,7n,74p,448b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -365,10 +390,10 @@ fonts/type1/public/pl/plr10.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/pl/plr12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/pl/plr17.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/pl/pltt12.pfb>
-Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (9 pages, 249518 byte
-s).
+Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (10 pages, 304853 byt
+es).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
