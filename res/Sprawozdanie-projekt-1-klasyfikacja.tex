@@ -35,7 +35,7 @@ Celem zadania jest stworzenie systemu klasyfikującego teksty w zależności od 
 \indent System został oparty o metodę k-NN. Ponad to została przeanalizowana skuteczność działania programu w odniesieniu do nietraktowanego wektora cech.
 
 \section{Klasyfikacja nadzorowana metodą $k$-NN}
-Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podobieństwa obiektów blisko położonych w przestrzeni cech. Jak podaje \cyte{tadeusiewicz90} założenia dla algorytmu:
+Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podobieństwa obiektów blisko położonych w przestrzeni cech. Jak podaje  założenia dla algorytmu:
 \newline $numclass$ - liczba rozpoznawanych klas
 \newline $dim$ - wymiar przestrzeni cech
 \newline $num$ - liczba obiektów ciągu uczącego
@@ -47,7 +47,7 @@ Metoda $k$-NN służy do klasyfikacji obiektów. Opiera się na założeniu podo
 \newline $tab[1...num][1...2]$ - tablica odległości
 \newline $sort(tab)$ - funkcja sortująca tablicę
 \newline $fun[1..numclass]$ - tabela wartości funkcji przynależności
-\newline $pointmax(fun)$  - funkcja wskazująca numer klasy, dla której wartość przynależności jest maksymalna. Algorytm według \cyte{tadeusiewicz90} składa się z następujących kroków:
+\newline $pointmax(fun)$  - funkcja wskazująca numer klasy, dla której wartość przynależności jest maksymalna. Algorytm według składa się z następujących kroków:
 \newline
 \begin{verbatim}
  1.  wyzeruj tablicę fun
@@ -195,6 +195,15 @@ Do wyznaczenia miar jakości klasyfikacji korzystamy z tablicy pomyłek. Spis oz
 \newline $FP$ - fałszywie pozytywna klasyfikacja
 \newline $FN$ - fałszywie negatywna klasyfikacja
 \newline $TN$ - prawdziwie negatywna klasyfikacja
+\newline
+\begin{enumerate}
+\item[TP]{\textit{Przykład dla $TP$} Jeśli obiekt $A$ w rzeczywistości należy do klasy $\mathcal{A}$, i zostanie sklasyfikowany do klasy $\mathcal{A}$ wówczas klasyfikacja jest uznawana za prawdziwie pozytywną $TP$.}
+\item[FP]{\textit{Przykład dla $FP$} Jeśli obiekt $A$ w rzeczywistości nie należy do klasy $\mathcal{A}$, i zostanie sklasyfikowany do klasy $\mathcal{A}$ wówczas klasyfikacja jest uznawana za fałszywie pozytywną $FP$.}
+\item[FN]{\textit{Przykład dla $FN$} Jeśli obiekt $A$ w rzeczywistości należy do klasy $\mathcal{A}$, i nie zostanie sklasyfikowany do klasy $\mathcal{A}$ wówczas klasyfikacja jest uznawana za fałszywie negatywną $FN$.}
+\item[TN]{\textit{Przykład dla $TN$} Jeśli obiekt $A$ w rzeczywistości nie należy do klasy $\mathcal{A}$, i nie zostanie sklasyfikowany do klasy $\mathcal{A}$ wówczas klasyfikacja jest uznawana za prawdziwie negatywną $TN$.}
+\end{enumerate}
+
+
 \subsubsection{Accuracy}
 Dokładność wyraża się wzorem:
 \begin{equation}
@@ -218,6 +227,27 @@ TPR=2*\frac{PPV*TPR}{PPV + TPR} \label{eq:eps}
 
 
 \section{Klasyfikacja z użyciem metryk i miar podobieństwa tekstów}
+Program umożliwia wybór trzech metryk do porównywania wektorów cech: metryki miejskiej, amplitudy kosinusowej oraz odległości euklidesowej.
+\begin{enumerate}
+\item[Metryka miejska]{\begin{equation}
+\rho_{C}(X,Y) = {{\Sigma}^{n}}_{i=1} |x_i-y_i|\label{eq:eps}
+\end{equation}}
+\item[Amplituda kosinusowa]{\begin{equation}
+r_{ca}(V_1,V_2) = \frac{|{{\Sigma}^{n}}_{i=1} v_{1i}\cdot v_{2i}|}{\sqrt{{{\Sigma}^{n}}_{i=1} v_{1i}^2 \cdot {{\Sigma}^{n}}_{i=1} v_{2i}^2}}\label{eq:eps}
+\end{equation}}
+\item[Odległość euklidesowa]{\begin{equation}
+\rho_{E}(X,Y) = \sqrt{{{\Sigma}^{n}}_{i=1} (x_i-y_i)^2}\label{eq:eps}
+\end{equation}}
+\end{enumerate}
+
+Jako metrykę tekstową do ekstrakcji cech tekstowych zastosowano metodę \textit{trigramów}, opisaną poniższym równaniem.
+\begin{equation}
+sim_{3}(s_1,s_2) = \frac{1}{N-2} {{\Sigma}^{N-2}}_{i=1} h(i)\label{eq:eps}
+\end{equation}
+\newline , gdzie
+\newline $N-2$ - ilość możliwych trój-elementowych podciągów.
+\newline $h(i) = 1$ - jeśli trój-elementowy podciąg zaczynający się od $i$-tej pozycji w $s_1$ występuje przynajmniej raz w $s_2$, w innym przypadki $h(i)=0$.
+
 Wzory, znaczenia i opisy symboli zastosowanych metryk z
 przykładami. Wzory, opisy i znaczenia miar
 podobieństwa tekstów zastosowanych w obliczaniu metryk dla wektorów cech z
@@ -228,25 +258,86 @@ na WIKAMP KSR.}
 
 \section{Budowa aplikacji}
 \subsection{Diagramy UML}
-Aplikacja złożona jest z komponentów: extractor, features, knn, main, model, parser, utils
+
 \subsubsection{Struktura aplikacji}
+Aplikacja złożona jest z komponentów: extractor, features, knn, main, model, parser, utils. Struktura aplikacji została przedstawiona na rysunku \ref{app} na stronie \pageref{app}.
+
+\begin{figure}
+\label{app}
 \includegraphics[scale=0.35]{App structure}
+\caption{Struktura aplikacji}
+\end{figure}
+
+
 \subsubsection{extractor}
+Pakiet ekstraktor udostępnia narzędzia umożliwiające ekstrakcję cech z tekstów. Pakiet ekstraktor zaprezentowano na rysunku \ref{extr} na stronie \pageref{extr}.
+\begin{figure}
+\label{extr}
 \includegraphics[scale=0.5]{Package extractor}
+\caption{Pakiet extrator}
+\end{figure}
+
+
 \subsubsection{features}
+Pakiet features udostępnia abstrakcję cechy oraz modeluje logikę konkretnych cech. Pakiet features zaprezentowano na rysunku \ref{feat} oraz \ref{feat2} na stronie \pageref{feat}.
+\begin{figure}
+\label{feat}
 \includegraphics[scale=0.20]{Features structure}
+\caption{Struktura pakietu features}
+\end{figure}
 \newline
+
+\begin{figure}
+\label{feat2}
 \includegraphics[scale=0.5]{Package features}
+\caption{Pakiet features}
+\end{figure}
+
+
 \subsubsection{knn}
+Pakiet knn udostępnia algorytm $k-NN$. Pakiet knn zaprezentowano na rysunku \ref{knn} na stronie \pageref{knn}.
+\begin{figure}
+\label{knn}
 \includegraphics[scale=0.5]{Package knn}
+\caption{Pakiet knn}
+\end{figure}
+
 \subsubsection{main}
+Pakiet main stanowi wejście, oraz implementuje logikę CLI. Pakiet main zaprezentowano na rysunku \ref{main} na stronie \pageref{main}.
+
+\begin{figure}
+\label{main}
 \includegraphics[scale=0.5]{Package main}
+\caption{Pakiet main}
+\end{figure}
+
+
 \subsubsection{model}
+Pakiet model dostarcza model danych dla artykułu reprezentowanego jako wektor cech oraz pozostałe wymagane modele danych. Pakiet model zaprezentowano na rysunku \ref{mdl} na stronie \pageref{mdl}.
+
+\begin{figure}
+\label{mdl}
 \includegraphics[scale=0.5]{Package model}
+\caption{Pakiet model}
+\end{figure}
+
 \subsubsection{parser}
+Pakiet parser udostępnia metody odpowiedzialne za przygotowanie tekstu przed ekstrakcją cech. Pakiet parser zaprezentowano na rysunku \ref{prs} na stronie \pageref{prs}.
+
+\begin{figure}
+\label{prs}
 \includegraphics[scale=0.5]{Package parser}
+\caption{Pakiet parser}
+\end{figure}
+
+
 \subsubsection{utils}
+Pakiet utils udostępnia narzędziowe metody wykorzystywane przez pozostałe pakiety.  Pakiet utils zaprezentowano na rysunku \ref{utls} na stronie \pageref{utls}.
+\begin{figure}
+\label{utls}
 \includegraphics[scale=0.5]{Package utils}
+\caption{Pakiet utils}
+\end{figure}
 
 \subsection{Prezentacja wyników, interfejs użytkownika} 
 Krótki ilustrowany opis jak użytkownik może korzystać z aplikacji, w~szczególności wprowadzać parametry klasyfikacji i odczytywać wyniki. Wersja JRE i inne wymogi
