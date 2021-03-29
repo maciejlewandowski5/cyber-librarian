@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class ExtractedArticle {
 
     ArrayList<Object> featureValues;
-    private String country;
+    public String country;
 
 //    public ExtractedArticle(ArrayList<Object> features) {
 //        this.featureValues = features;
