@@ -1,6 +1,5 @@
 package dl.extractor;
 
-import dl.extractor.features.TotalWordsNumber;
 import dl.model.ExtractedArticle;
 import dl.parser.Article;
 
@@ -32,13 +31,46 @@ public class Extractor {
         return result;
     }
 
-    public double getDistance(ExtractedArticle article1, ExtractedArticle article2) {
+    public double getEuclideanDistance(ExtractedArticle article1, ExtractedArticle article2) {
         double sum = 0;
-        for(Feature feature:features) {
+        for (Feature feature : features) {
             int index = features.indexOf(feature);
-            sum += feature.distance(article1.getFeatureValue(index), article2.getFeatureValue(index));
+            sum += feature.preEuclideanDistance(
+                    article1.getFeatureValue(index),
+                    article2.getFeatureValue(index));
         }
         return Math.sqrt(sum);
+    }
+
+    double getTaxiCabGeometryDistance(ExtractedArticle article1, ExtractedArticle article2) {
+        double sum = 0;
+        for (Feature feature : features) {
+            int index = features.indexOf(feature);
+            sum += feature.preTaxiCabGeometryDistance(
+                    article1.getFeatureValue(index),
+                    article2.getFeatureValue(index));
+        }
+        return sum;
+    }
+
+
+    double getCousinsAmplitudeDistance(ExtractedArticle article1, ExtractedArticle article2) {
+        double nominator = 0;
+        double sumOfSquares1 = 0;
+        double sumOfSquares2 = 0;
+
+        for (Feature feature : features) {
+            int index = features.indexOf(feature);
+            nominator += feature.preCousinsAmplitudeNominatorDistance(
+                    article1.getFeatureValue(index),
+                    article2.getFeatureValue(index));
+            sumOfSquares1 += feature.preCousinsAmplitudeDenominatorDistance(article1);
+            sumOfSquares2 += feature.preCousinsAmplitudeDenominatorDistance(article2);
+
+        }
+        nominator = Math.abs(nominator);
+        double denominator = Math.sqrt(sumOfSquares1 * sumOfSquares2);
+        return nominator / denominator;
     }
 
 

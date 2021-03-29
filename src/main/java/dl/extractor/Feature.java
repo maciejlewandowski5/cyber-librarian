@@ -9,5 +9,12 @@ public interface Feature {
 
     void clear();
 
-    double distance(Object object1, Object object2);
+    double getNormalizeCoefficient();
+
+    double preEuclideanDistance(Object object1, Object object2);
+
+    double preTaxiCabGeometryDistance(Object object1, Object object2);
+
+    double preCousinsAmplitudeNominatorDistance(Object object1, Object object2);
+    double preCousinsAmplitudeDenominatorDistance(Object object1);
 }

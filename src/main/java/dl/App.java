@@ -18,7 +18,15 @@ public class App {
         ArticlesLoader articlesLoader = new ArticlesLoader();
 
         Extractor extractor = new Extractor();
-        TotalWordsNumber totalWordsNumber = new TotalWordsNumber();
+        TotalWordsNumber totalWordsNumber = new TotalWordsNumber(500 /*
+        Initial
+        parsing
+        should
+        provide
+        this
+        information
+        */
+        );
         UnitType unitType = new UnitType();
         NLengthCharCounter shortWords = new NLengthCharCounter(0, 4);
         NLengthCharCounter middleWords = new NLengthCharCounter(5, 8);
@@ -29,7 +37,15 @@ public class App {
         MostFrequentPhrase mostFrequentStockExchange = new MostFrequentPhrase(MostFrequentFile.STOCK_EXCHANGE);
         MostFrequentPhrase mostFrequentSea = new MostFrequentPhrase(MostFrequentFile.SEAS);
         NumberOfPrices numberOfPrices = new NumberOfPrices();
-        UniqueWordsNumber uniqueWordsNumber = new UniqueWordsNumber();
+        UniqueWordsNumber uniqueWordsNumber = new UniqueWordsNumber(500/*
+        Initial
+        parsing
+        should
+        provide
+        this
+        information
+        */
+        );
 
         extractor.addFeature(totalWordsNumber);
         extractor.addFeature(unitType);

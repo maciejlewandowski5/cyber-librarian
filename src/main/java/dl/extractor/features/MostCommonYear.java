@@ -8,6 +8,8 @@ import java.util.*;
 public class MostCommonYear implements Feature {
 
     Map<String, Integer> years;
+    private static final int MAX_YEAR = 2099;
+    private static final int MIN_YEAR = 0;
 
     public MostCommonYear() {
         years = new HashMap<>();
@@ -43,7 +45,27 @@ public class MostCommonYear implements Feature {
     }
 
     @Override
-    public double distance(Object object1, Object object2) {
-        return ((Integer)object1 - (Integer)object2)*((Integer)object1 - (Integer)object2);
+    public double getNormalizeCoefficient() {
+        return  1/(double)(MAX_YEAR-MIN_YEAR);
+    }
+
+    @Override
+    public double preEuclideanDistance(Object object1, Object object2) {
+        return getNormalizeCoefficient()*((Integer)object1 - (Integer)object2)*((Integer)object1 - (Integer)object2);
+    }
+
+    @Override
+    public double preTaxiCabGeometryDistance(Object object1, Object object2) {
+        return Math.abs(getNormalizeCoefficient() * ((Integer)object1 - (Integer)object2));
+    }
+
+    @Override
+    public double preCousinsAmplitudeNominatorDistance(Object object1, Object object2) {
+        return getNormalizeCoefficient()*((Integer)object1 * (Integer)object2);
+    }
+
+    @Override
+    public double preCousinsAmplitudeDenominatorDistance(Object object1) {
+        return (Integer)object1*(Integer)object1;
     }
 }

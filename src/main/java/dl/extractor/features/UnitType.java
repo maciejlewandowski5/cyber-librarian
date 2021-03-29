@@ -106,7 +106,12 @@ public class UnitType implements Feature {
     }
 
     @Override
-    public double distance(Object object1, Object object2) {
+    public double getNormalizeCoefficient() {
+        return 1;
+    }
+
+    @Override
+    public double preEuclideanDistance(Object object1, Object object2) {
         Float o1 = (Float)object1;
         Float o2 = (Float)object2;
         if(o1==1){
@@ -119,5 +124,20 @@ public class UnitType implements Feature {
             return 0;
         }
 
+    }
+
+    @Override
+    public double preTaxiCabGeometryDistance(Object object1, Object object2) {
+        return preEuclideanDistance(object1,object2);
+    }
+
+    @Override
+    public double preCousinsAmplitudeNominatorDistance(Object object1, Object object2) {
+        return (Float)object1*(Float) object2;
+    }
+
+    @Override
+    public double preCousinsAmplitudeDenominatorDistance(Object object1) {
+        return (Float)object1*(Float) object1;
     }
 }

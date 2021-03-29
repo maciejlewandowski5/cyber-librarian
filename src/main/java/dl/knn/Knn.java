@@ -32,7 +32,7 @@ public class Knn {
 
         for (ExtractedArticle extractedArticle : extractedArticles) {
             if (!extractedArticle.equals(hero)) {
-                distances.add(new Pair<>(extractedArticle, extractor.getDistance(hero, extractedArticle)));
+                distances.add(new Pair<>(extractedArticle, extractor.getEuclideanDistance(hero, extractedArticle)));
             }
         }
         Pair<ExtractedArticle, Double> n = null;

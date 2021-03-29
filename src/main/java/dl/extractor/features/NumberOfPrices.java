@@ -25,17 +25,18 @@ public class NumberOfPrices implements Feature {
         }
     };
     private int priceOccurrences;
+    private int totalWords;
 
     public NumberOfPrices() {
         this.priceOccurrences = 0;
+        this.totalWords = 0;
     }
 
     @Override
     public void extract(Article article) {
         List<String> text = article.getBody();
-        text.forEach(word -> {
-            checkOccurrence(word);
-        });
+        text.forEach(this::checkOccurrence);
+        totalWords = text.size();
     }
 
     private void checkOccurrence(String word) {
@@ -56,10 +57,31 @@ public class NumberOfPrices implements Feature {
     @Override
     public void clear() {
         priceOccurrences = 0;
+        totalWords = 0;
     }
 
     @Override
-    public double distance(Object object1, Object object2) {
-        return ((Integer)object1 - (Integer)object2)*((Integer)object1 - (Integer)object2);
+    public double getNormalizeCoefficient() {
+        return 1/(double)(totalWords);
+    }
+
+    @Override
+    public double preEuclideanDistance(Object object1, Object object2) {
+        return getNormalizeCoefficient()*getNormalizeCoefficient()*((Integer) object1 - (Integer) object2) * ((Integer) object1 - (Integer) object2);
+    }
+
+    @Override
+    public double preTaxiCabGeometryDistance(Object object1, Object object2) {
+        return Math.abs(getNormalizeCoefficient()*((Integer) object1 - (Integer) object2));
+    }
+
+    @Override
+    public double preCousinsAmplitudeNominatorDistance(Object object1, Object object2) {
+        return getNormalizeCoefficient()*((Integer) object1 * (Integer) object2);
+    }
+
+    @Override
+    public double preCousinsAmplitudeDenominatorDistance(Object object1) {
+        return getNormalizeCoefficient()*(Integer) object1 * (Integer) object1;
     }
 }

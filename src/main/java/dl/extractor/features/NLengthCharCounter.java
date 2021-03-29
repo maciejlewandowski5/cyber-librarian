@@ -23,8 +23,28 @@ public class NLengthCharCounter implements Feature {
     }
 
     @Override
-    public double distance(Object object1, Object object2) {
+    public double getNormalizeCoefficient() {
+        return  1;
+    }
+
+    @Override
+    public double preEuclideanDistance(Object object1, Object object2) {
         return ((Double)object1 - (Double)object2)*((Double)object1 - (Double)object2);
+    }
+
+    @Override
+    public double preTaxiCabGeometryDistance(Object object1, Object object2) {
+        return Math.abs((Double)object1 - (Double)object2);
+    }
+
+    @Override
+    public double preCousinsAmplitudeNominatorDistance(Object object1, Object object2) {
+        return (Double)object1 * (Double)object2;
+    }
+
+    @Override
+    public double preCousinsAmplitudeDenominatorDistance(Object object1) {
+        return (Double)object1 * (Double)object1;
     }
 
     @Override

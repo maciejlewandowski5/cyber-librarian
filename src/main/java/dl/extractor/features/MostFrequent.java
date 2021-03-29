@@ -37,12 +37,33 @@ public abstract class MostFrequent implements Feature {
     }
 
     @Override
+    public double getNormalizeCoefficient() {
+        return  1;
+    }
+
+    @Override
     public void clear() {
         map.forEach((k,v) ->map.put(k,0));
     }
 
     @Override
-    public double distance(Object object1, Object object2) {
+    public double preEuclideanDistance(Object object1, Object object2) {
         return ((String)object1).equals((String)object2)?1.0d:0.0;
     }
+    @Override
+    public double preTaxiCabGeometryDistance(Object object1, Object object2) {
+        return preEuclideanDistance(object1,object2);
+    }
+
+    @Override
+    public double preCousinsAmplitudeNominatorDistance(Object object1, Object object2) {
+        return preEuclideanDistance(object1,object2);
+    }
+
+    @Override
+    public double preCousinsAmplitudeDenominatorDistance(Object object1) {
+        return 1.0d;
+    }
+
+
 }
