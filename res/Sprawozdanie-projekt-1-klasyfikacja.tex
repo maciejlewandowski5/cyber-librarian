@@ -248,13 +248,14 @@ sim_{3}(s_1,s_2) = \frac{1}{N-2} {{\Sigma}^{N-2}}_{i=1} h(i)\label{eq:eps}
 \newline $N-2$ - ilość możliwych trój-elementowych podciągów.
 \newline $h(i) = 1$ - jeśli trój-elementowy podciąg zaczynający się od $i$-tej pozycji w $s_1$ występuje przynajmniej raz w $s_2$, w innym przypadki $h(i)=0$.
 
-Wzory, znaczenia i opisy symboli zastosowanych metryk z
-przykładami. Wzory, opisy i znaczenia miar
-podobieństwa tekstów zastosowanych w obliczaniu metryk dla wektorów cech z
-przykładami dla każdej miary \cite{niewiadomski08}.  Oznaczenia jednolite w obrębie całego sprawozdania.  Wstępne wyniki miary Accuracy dla próbnych klasyfikacji na ograniczonym zbiorze tekstów (podać parametry i kryteria
-wyboru wg punktów 3.-8. z opisu Projektu 1.). \\ 
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 04 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
+\subsubsection{Wstępne wyniki miary accuracy}
+Uruchomiono program w czterech konfiguracjach:
+\newline Dla zbioru uczącego stanowiącego $60 proc$ oraz dla $17$ sąsiadów $ACC=0.7666$.
+\newline Dla zbioru uczącego stanowiącego $60 proc$ oraz dla $3$ sąsiadów $ACC=0.7693$.
+\newline Dla zbioru uczącego stanowiącego $30 proc$ oraz dla $17$ sąsiadów $ACC=0.7913$.
+\newline Dla zbioru uczącego stanowiącego $30 proc$ oraz dla $3$ sąsiadów $ACC=0.7379$.
+
+
 
 \section{Budowa aplikacji}
 \subsection{Diagramy UML}
@@ -340,10 +341,88 @@ Pakiet utils udostępnia narzędziowe metody wykorzystywane przez pozostałe pak
 \end{figure}
 
 \subsection{Prezentacja wyników, interfejs użytkownika} 
-Krótki ilustrowany opis jak użytkownik może korzystać z aplikacji, w~szczególności wprowadzać parametry klasyfikacji i odczytywać wyniki. Wersja JRE i inne wymogi
-niezbędne do uruchomienia aplikacji przez użytkownika na własnym komputerze. \\
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 04 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
+\subsubsection{Interfejs użytkownika}
+Interfejs użytkownika jest w formie tekstowej. Poniżej pokazano przykładowe uruchomienie programu przy udziale zbioru treningowego $60 proc$, siedmiu sąsiadów, do klasyfikacji wykorzystano wszystkie kraje, oraz użyto wszystkich cech opisanych wyżej.
+\begin{verbatim}
+Okresl procent zbioru treningowego:
+60
+Okresl ilosc sasiadow KNN:
+17
+Wybierz interesujące kraje: 
+0. Wszystkie
+1. USA
+2. UK
+3. Japan
+4. Canada
+5. West-Germany
+6. France
+Y. Przejdz dalej
+0
+Wybierz interesujące metryki: 
+0. Wszystkie
+1. TotalWordsNumber
+2. unitType
+3. shortWords
+4. middleWords
+5. longWords
+6. mostCommonYear
+7. mostFrequentWordMonth
+8. mostFrequentWordBusinessEntity
+9. mostFrequentStockExchange
+10. mostFrequentSea
+11. numberOfPrices
+12. uniqueWordsNumber
+Y. Przejdz dalej
+0
+loading...
+\end{verbatim}
+
+Wynik wygenerowany przez program będzie następujący:
+
+\begin{verbatim}
+Dla usa _________
+Dokladnosc: 0.766563241467421
+Precyzja: 0.789354044326577
+Czulosc: 0.9643601018282805
+F1: 0.8681249999999999
+
+
+Dla uk _________
+Dokladnosc: 0.766563241467421
+Precyzja: 0.165
+Czulosc: 0.0889487870619946
+F1: 0.11558669001751312
+
+
+Dla japan _________
+Dokladnosc: 0.766563241467421
+Precyzja: 0.5
+Czulosc: 0.0
+F1: 0.0
+
+
+Dla canada _________
+Dokladnosc: 0.766563241467421
+Precyzja: 0.5
+Czulosc: 0.0
+F1: 0.0
+
+
+Dla west-germany _________
+Dokladnosc: 0.766563241467421
+Precyzja: 0.5
+Czulosc: 0.0
+F1: 0.0
+
+
+Dla france _________
+Dokladnosc: 0.766563241467421
+Precyzja: 0.5
+Czulosc: 0.0
+F1: 0.0
+
+\end{verbatim}
+
 
 \section{Wyniki klasyfikacji dla różnych parametrów wejściowych}
 Wyniki kolejnych eksperymentów wg punktów 2.-8. opisu projektu 1.  Wykresy i tabele
@@ -358,6 +437,7 @@ na WIKAMP KSR.}
 
 
 \section{Dyskusja, wnioski}
+
 Dokładne interpretacje uzyskanych wyników w zależności od parametrów klasyfikacji
 opisanych w punktach 3.-8 opisu Projektu 1. 
 Szczególnie istotne są wnioski o charakterze uniwersalnym, istotne dla podobnych zadań. 

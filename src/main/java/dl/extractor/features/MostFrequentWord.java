@@ -1,6 +1,6 @@
 package dl.extractor.features;
 
-import dl.extractor.Feature;
+import dl.metrics.TriGram;
 import dl.model.MostFrequentFile;
 import dl.parser.Article;
 import dl.parser.Stemmer;
@@ -36,10 +36,12 @@ public class MostFrequentWord extends MostFrequent {
     public void extract(Article article) {
         List<String> text = article.getBody();
         text.forEach(word -> {
-            if (map.containsKey(word)) {
-                Integer count = map.get(word);
-                map.put(word, count + 1);
-            }
+            map.forEach((key, occurrences) -> {
+                if (TriGram.calculate(word, key) > 0.6) {
+                    Integer count = map.get(key);
+                    map.put(key, count + 1);
+                }
+            });
         });
     }
 }

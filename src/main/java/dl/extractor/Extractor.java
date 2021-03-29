@@ -77,4 +77,8 @@ public class Extractor {
     public void addFeature(Feature feature) {
         this.features.add(feature);
     }
+
+    public void addFeatures(ArrayList features) {
+        this.features = features;
+    }
 }
