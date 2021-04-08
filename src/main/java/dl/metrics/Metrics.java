@@ -16,7 +16,10 @@ public class Metrics {
     public static double calculateF1(List<String> expected, List<String> actual, String country) {
         double PPV = calculatePrecision(expected, actual, country);
         double TPR = calculateRecall(expected, actual, country);
-        return 2 * ((PPV * TPR) / (PPV + TPR));
+        if (PPV + TPR != 0) {
+            return 2 * ((PPV * TPR) / (PPV + TPR));
+        }
+        return 0;
     }
 
     public static double calculatePrecision (List<String> expected, List<String> actual, String country) {

@@ -21,7 +21,9 @@ public class DatasetSplitter {
         ArrayList<ExtractedArticle> trainingList = new ArrayList(articleList.subList(0, trainingElements));
         for (int i = 0; i < trainingList.size(); i++) {
             String country = trainingList.get(i).getCountry();
-            knnValidationMap.put(country, (int) knnValidationMap.get(country)+1);
+            if (countries.contains(country)) {
+                knnValidationMap.put(country, (int) knnValidationMap.get(country)+1);
+            }
         }
 
         countries.forEach(country -> {

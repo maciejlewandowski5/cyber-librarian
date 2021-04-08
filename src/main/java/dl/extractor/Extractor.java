@@ -42,7 +42,7 @@ public class Extractor {
         return Math.sqrt(sum);
     }
 
-    double getTaxiCabGeometryDistance(ExtractedArticle article1, ExtractedArticle article2) {
+    public double getTaxiCabGeometryDistance(ExtractedArticle article1, ExtractedArticle article2) {
         double sum = 0;
         for (Feature feature : features) {
             int index = features.indexOf(feature);
@@ -54,7 +54,7 @@ public class Extractor {
     }
 
 
-    double getCousinsAmplitudeDistance(ExtractedArticle article1, ExtractedArticle article2) {
+    public double getCousinsAmplitudeDistance(ExtractedArticle article1, ExtractedArticle article2) {
         double nominator = 0;
         double sumOfSquares1 = 0;
         double sumOfSquares2 = 0;
@@ -64,8 +64,8 @@ public class Extractor {
             nominator += feature.preCousinsAmplitudeNominatorDistance(
                     article1.getFeatureValue(index),
                     article2.getFeatureValue(index));
-            sumOfSquares1 += feature.preCousinsAmplitudeDenominatorDistance(article1);
-            sumOfSquares2 += feature.preCousinsAmplitudeDenominatorDistance(article2);
+            sumOfSquares1 += feature.preCousinsAmplitudeDenominatorDistance(article1.getFeatureValue(index));
+            sumOfSquares2 += feature.preCousinsAmplitudeDenominatorDistance(article2.getFeatureValue(index));
 
         }
         nominator = Math.abs(nominator);
