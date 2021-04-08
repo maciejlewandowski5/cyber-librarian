@@ -205,21 +205,25 @@ Do wyznaczenia miar jakości klasyfikacji korzystamy z tablicy pomyłek. Spis oz
 
 
 \subsubsection{Accuracy}
+Dokładność określa sprawność klasyfikatora. Miara ta jest wspólna dla wszystkich klas.
 Dokładność wyraża się wzorem:
 \begin{equation}
 ACC=\frac{\Sigma TP}{\Sigma populacja} \label{eq:eps}
 \end{equation}
 \subsubsection{Precision}
+Precyzja jest miarą liczoną dla danej klasy. Miara ta określa precyzje rozpoznawania w obrębie konkretnej klasy.
 Precyzja wyraża się wzorem:
 \begin{equation}
 PPV=\frac{\Sigma TP}{\Sigma TP + \Sigma FP} \label{eq:eps}
 \end{equation}
 \subsubsection{Recall}
+Recall jest miarą liczoną dla danej klasy. Miara ta określa ilość rozpoznanych elementów danej klasy.
 Czułość wyraża się wzorem:
 \begin{equation}
 TPR=\frac{\Sigma TP}{\Sigma TP + \Sigma FN} \label{eq:eps}
 \end{equation}
 \subsubsection{F1}
+F1 jest miarą liczoną dla danej klasy. Liczona jest na podstawie miar precision oraz recall jako ich średnia harmoniczna.
 Miarę F1 wyraża się wzorem:
 \begin{equation}
 TPR=2*\frac{PPV*TPR}{PPV + TPR} \label{eq:eps}
