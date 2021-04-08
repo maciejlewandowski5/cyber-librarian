@@ -122,7 +122,8 @@ public class App {
             extractedArticles.add(new ExtractedArticle(extractor.getFeaturesValues(), a.getPlaces()));
         }
 
-        ArrayList<ArrayList> splitData = DatasetSplitter.splitData(extractedArticles, CLI.getLearningSetPercentage());
+        ArrayList<ArrayList> splitData = DatasetSplitter.splitData(extractedArticles, CLI.getLearningSetPercentage(),
+                CLI.getKNeighbors(), CLI.getCountries());
         ArrayList<ExtractedArticle> classifiedSet = splitData.get(0);
         ArrayList<ExtractedArticle> learningSet = splitData.get(1);
 
