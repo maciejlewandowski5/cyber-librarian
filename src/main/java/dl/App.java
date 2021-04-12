@@ -143,19 +143,45 @@ public class App {
         //    System.out.println("Real country: " + extractedArticle.getCountry() + "; classified country: " + mostFrequentCountry);
         }
 
+        double weightedRec = 0;
+        double weightedPrec = 0;
+        double weightedF1 = 0;
+        double arithmeticAvgRec = 0;
+        double arithmeticAvgPrec = 0;
+        double arithmeticAvgF1 = 0;
+
         ArrayList<String> countries = CLI.getCountries();
-        countries.forEach(country -> {
+        for (int i = 0; i < countries.size(); i++) {
+            String country = countries.get(i);
+
             System.out.println("\n");
             System.out.println("Dla " + country + " _________");
             double acc = Metrics.calculateAccuracy(expected, actual);
             double rec = Metrics.calculateRecall(expected, actual, country);
             double prec = Metrics.calculatePrecision(expected, actual, country);
             double f1 = Metrics.calculateF1(expected, actual, country);
+            arithmeticAvgRec += rec;
+            arithmeticAvgPrec += prec;
+            arithmeticAvgF1 += f1;
+            weightedRec += Metrics.calculateWeightedRecall(expected, actual, country);
+            weightedPrec += Metrics.calculateWeightedPrecision(expected, actual, country);
+            weightedF1 += Metrics.calculateWeightedF1(expected, actual, country);
             System.out.println("Dokladnosc: " + acc);
             System.out.println("Precyzja: " + prec);
             System.out.println("Czulosc: " + rec);
             System.out.println("F1: " + f1);
-        });
+        }
 
+        System.out.println("Ważona precyzja: " + (weightedPrec / learningSet.size()));
+        System.out.println("Ważona Czulosc: " + (weightedRec / learningSet.size()));
+        System.out.println("Ważony F1: " + (weightedF1 / learningSet.size()));
+
+        System.out.println("Srednia arytmetyczna precyzji: " + (arithmeticAvgPrec / countries.size()));
+        System.out.println("Srednia arytmetyczna czulosci: " + (arithmeticAvgRec / countries.size()));
+        System.out.println("Srednia arytmetyczna f1: " + (arithmeticAvgF1 / countries.size()));
+
+        System.out.println(arithmeticAvgPrec / countries.size());
+        System.out.println(arithmeticAvgRec / countries.size());
+        System.out.println(arithmeticAvgF1 / countries.size());
     }
 }

@@ -32,8 +32,8 @@ public class Knn {
 
         for (ExtractedArticle extractedArticle : extractedArticles) {
             if (!extractedArticle.equals(hero)) {
-                //distances.add(new Pair<>(extractedArticle, extractor.getEuclideanDistance(hero, extractedArticle)));
-                distances.add(new Pair<>(extractedArticle, extractor.getCousinsAmplitudeDistance(hero, extractedArticle)));
+                distances.add(new Pair<>(extractedArticle, extractor.getEuclideanDistance(hero, extractedArticle)));
+                //distances.add(new Pair<>(extractedArticle, extractor.getCousinsAmplitudeDistance(hero, extractedArticle)));
                 //distances.add(new Pair<>(extractedArticle, extractor.getTaxiCabGeometryDistance(hero, extractedArticle)));
             }
         }
