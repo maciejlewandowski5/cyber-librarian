@@ -4,7 +4,7 @@
 \usepackage{listings}
 \usepackage{graphicx}
 
-\graphicspath{ {../uml/} }
+\graphicspath{ {../img/} }
 
 \studycycle{Informatyka, studia STACJONARNE, I st.}
 \coursesemester{VI}
@@ -253,7 +253,7 @@ sim_{3}(s_1,s_2) = \frac{1}{N-2} {{\Sigma}^{N-2}}_{i=1} h(i)\label{eq:eps}
 \newline $h(i) = 1$ - jeśli trój-elementowy podciąg zaczynający się od $i$-tej pozycji w $s_1$ występuje przynajmniej raz w $s_2$, w innym przypadki $h(i)=0$.
 
 \subsubsection{Wstępne wyniki miary accuracy}
-Uruchomiono program w czterech konfiguracjach:
+Uruchomiono program w czterech konfiguracjach, we wszystkich zastosowane metrykę euklidesową:
 \newline Dla zbioru uczącego stanowiącego $60 proc$ oraz dla $17$ sąsiadów $ACC=0.7666$.
 \newline Dla zbioru uczącego stanowiącego $60 proc$ oraz dla $3$ sąsiadów $ACC=0.7693$.
 \newline Dla zbioru uczącego stanowiącego $30 proc$ oraz dla $17$ sąsiadów $ACC=0.7913$.
@@ -429,15 +429,164 @@ F1: 0.0
 
 
 \section{Wyniki klasyfikacji dla różnych parametrów wejściowych}
-Wyniki kolejnych eksperymentów wg punktów 2.-8. opisu projektu 1.  Wykresy i tabele
-obowiązkowe, dokładnie opisane w ,,captions'' (tytułach), konieczny opis osi i
-jednostek wykresów oraz kolumn i wierszy tabel.\\ 
 
-{**Ewentualne wyniki realizacji punktu 9. opisu Projektu 1., czyli,,na ocenę 5.0'' i ich porównanie do wyników z
-części obowiązkowej**.}\\
+\subsection{Wpływ ilości sąsiadów}
+Wykonano obliczenia dla dziesięciu wartości ilości sąsiadów z wykorzystaniem metryki euklidesowej oraz podziałem zbioru uczącego $60/40$. Wykres na stronie \pageref{accuracy_k} przedstawia wyniki obliczeń.  Wyniki zawarto w tabeli na stronie \pageref{tk}.
 
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 05 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
+
+\begin{table}
+\label{tk}
+\begin{tabular}{|c|c|}
+\hline k & accuracy \\
+\hline \hline
+1& 0.7578\\
+2& 0.7281\\
+5& 0.7618\\
+7& 0.7717\\
+10& 0.7306\\
+15& 0.7826\\
+20& 0.7799\\
+25& 0.7941\\
+50& 0.7921\\
+100& 0.7841\\
+\end{tabular}
+\caption{Tabela przedstawiająca zależność dokładności od ilości sąsiadów}
+\end{table}
+
+\begin{figure}
+\label{accuracy_k}
+\includegraphics[scale=0.75]{accuracy_k}
+\caption{Wykres przedstawiający zależność dokładności od ilości sąsiadów}
+\end{figure}
+
+
+
+\subsection{Wpływ proporcji podziału zbioru uczącego}
+Wykonano obliczenia dla pięciu podziału zbioru uczącego z wykorzystaniem metryki euklidesowej oraz ilości sąsiadów $25$. Wykres na stronie \pageref{accuracy_div} przedstawia wyniki obliczeń. Wyniki zawarto w tabeli na stronie \pageref{tdiv}.
+
+\begin{table}
+\label{tdiv}
+\begin{tabular}{|c|c|}
+\hline proporcja podziału & accuracy \\
+\hline \hline
+10/90& 0.7882\\
+30/70& 0.7903\\
+50/50& 0.7937\\
+70/30& 0.7815\\
+90/10& 0.7847\\
+\end{tabular}
+\caption{Tabela przedstawiająca zależność dokładności od podziału zbioru uczącego}
+\end{table}
+
+
+
+
+\begin{figure}
+\label{accuracy_div}
+\includegraphics[scale=0.75]{accuracy_div}
+\caption{Wykres przedstawiający zależność dokładności od podziału zbioru uczącego}
+\end{figure}
+
+\subsection{Wpływ metryki}
+Wykonano obliczenia dla trzech metryk z ilością sąsiadów $k=25$ oraz podziale zbioru uczącego $60/40$. Wykres na stronie \pageref{accuracy_met} przedstawia wyniki obliczeń. Wyniki zawarto w tabeli na stronie \pageref{tmet}.
+
+\begin{table}
+\label{tmet}
+\begin{tabular}{|c|c|}
+\hline metryka & accuracy \\
+\hline \hline
+Euklidesowa& 0.7934\\
+Uliczna& 0.7844\\
+Czebyszewa& 0.7903\\
+
+\end{tabular}
+\caption{Tabela przedstawiająca zależność dokładności od metryki odległości}
+\end{table}
+
+
+
+
+\begin{figure}
+\label{accuracy_met}
+\includegraphics[scale=0.75]{accuracy_metric}
+\caption{Wykres przedstawiający zależność dokładności od metryki odległości}
+\end{figure}
+
+
+\subsection{Wpływ poszczególnych cech}
+
+
+\subsubsection{Pierwszy zestaw cech}
+Miary precyzji, czułości oraz f1 podano jako średnią ze wszystkich klas. Parametry wejściowe ustawiono jako: podział $60/40$, $k=25$ oraz metrykę euklidesową. Wyniki zawarto w tabeli na stronie \pageref{tf1}. Wykres na stronie \pageref{features_set_1} przedstawia wyniki.
+
+
+\begin{table}
+\label{tf1}
+\begin{tabular}{|c|c|c|c|c|}
+\hline  & cechy 1,2,5,9 & cechy 9,10,11,12 & cechy 5,6,7,8 & cechy 1,2,3,4 \\
+\hline \hline
+dokładność & 0.7934 & 0.7916 & 0.7848 & 0.7735\\
+precyzja & 0.5490 & 0.5486 & 0.5454 & 0.3568 \\
+czułość & 0.1667 & 0.1667 & 0.1740 & 0.1714\\
+f1 & 0.1475 & 0.1473 & 0.1609 & 0.1597 \\
+\end{tabular}
+\caption{Tabela przedstawiająca wyniki pierwszego zestawu cech. Parametry wejściowe ustawiono jako: podział $60/40$, $k=25$.}
+\end{table}
+
+\begin{figure}
+\label{features_set_1}
+\includegraphics[scale=1]{features_set_1}
+\caption{Wykres przedstawiający zależność dokładności od metryki odległości. Parametry wejściowe ustawiono jako: podział $60/40$, $k=25$.}
+\end{figure}
+
+
+\subsubsection{Drugi zestaw cech}
+Miary precyzji, czułości oraz f1 podano jako średnią ze wszystkich klas. Parametry wejściowe ustawiono jako: podział $40/60$, $k=10$ oraz metrykę euklidesową. Wyniki zawarto w tabeli na stronie \pageref{tf2}. Wykres na stronie \pageref{features_set_2} przedstawia wyniki.
+
+
+\begin{table}
+\label{tf2}
+\begin{tabular}{|c|c|c|c|c|}
+\hline  & cechy 1,2,5,9 & cechy 9,10,11,12 & cechy 5,6,7,8 & cechy 1,2,3,4 \\
+\hline \hline
+dokładność & 0.7902 & 0.7790 & 0.7925 & 0.7750\\
+precyzja & 0.4650 & 0.4845 & 0.2712 & 0.2548 \\
+czułość & 0.1667 & 0.1683 & 0.1724 & 0.1703\\
+f1 & 0.1471 & 0.1521 & 0.1601 & 0.1590 \\
+\end{tabular}
+\caption{Tabela przedstawiająca wyniki drugiego zestawu cech. Parametry wejściowe ustawiono jako: podział $40/60$, $k=10$.}
+\end{table}
+
+\begin{figure}
+\label{features_set_2}
+\includegraphics[scale=1]{features_set_2}
+\caption{Wykres przedstawiający zależność dokładności od metryki odległości. Parametry wejściowe ustawiono jako: podział $40/60$, $k=10$.}
+\end{figure}
+
+
+\subsubsection{Trzeci zestaw cech}
+Miary precyzji, czułości oraz f1 podano jako średnią ze wszystkich klas. Parametry wejściowe ustawiono jako: podział $20/80$, $k=3$ oraz metrykę euklidesową. Wyniki zawarto w tabeli na stronie \pageref{tf3}. Wykres na stronie \pageref{features_set_3} przedstawia wyniki.
+
+
+\begin{table}
+\label{tf3}
+\begin{tabular}{|c|c|c|c|c|}
+\hline  & cechy 1,2,5,9 & cechy 9,10,11,12 & cechy 5,6,7,8 & cechy 1,2,3,4 \\
+\hline \hline
+dokładność & 0.7439 & 0.7598 & 0.7737 & 0.7665\\
+precyzja & 0.3215 & 0.3193 & 0.1842 & 0.2257 \\
+czułość & 0.1808 & 0.1743 & 0.1716 & 0.1831\\
+f1 & 0.668 1& 0.1618 & 0.1607 & 0.1809 \\
+\end{tabular}
+\caption{Tabela przedstawiająca wyniki drugiego zestawu cech. Parametry wejściowe ustawiono jako: podział $20/80$, $k=3$.}
+\end{table}
+
+\begin{figure}
+\label{features_set_3}
+\includegraphics[scale=1]{features_set_3}
+\caption{Wykres przedstawiający zależność dokładności od metryki odległości. Parametry wejściowe ustawiono jako: podział $20/80$, $k=3$.}
+\end{figure}
+
 
 
 \section{Dyskusja, wnioski}
