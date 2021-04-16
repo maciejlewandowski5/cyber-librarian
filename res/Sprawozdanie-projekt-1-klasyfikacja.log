@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  12 APR 2021 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  16 APR 2021 12:47
 entering extended mode
 **./Sprawozdanie-projekt-1-klasyfikacja.tex
 (Sprawozdanie-projekt-1-klasyfikacja.tex
@@ -98,17 +98,25 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 )
 \Gin@req@height=\dimen144
 \Gin@req@width=\dimen145
+) (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks19
+\float@box=\box49
+\@float@everytoks=\toks20
+\@floatcapt=\box50
 )
 LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 2
-4.
- (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
+5.
+
+(C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count195
-\l__pdf_internal_box=\box49
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box51
 ) (Sprawozdanie-projekt-1-klasyfikacja.aux
 
 LaTeX Warning: Label `eq:eps' multiply defined.
@@ -170,37 +178,37 @@ LaTeX Warning: Label `eq:eps' multiply defined.
 )
 \openout1 = `Sprawozdanie-projekt-1-klasyfikacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count196
+\scratchcounter=\count197
 \scratchdimen=\dimen146
-\scratchbox=\box50
-\nofMPsegments=\count197
-\nofMParguments=\count198
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count199
+\scratchbox=\box52
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count266
 \MPscratchDim=\dimen147
-\MPnumerator=\count266
-\makeMPintoPDFobject=\count267
-\everyMPtoPDFconversion=\toks20
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks22
 )
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -208,46 +216,46 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\c@lstlisting=\count268
+\c@lstlisting=\count269
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 25.
+(Font)              <6> on input line 26.
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
 
  []
 
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-25.
+26.
 (C:\Users\macie\AppData\Local\Programs\MiKTeX\tex/latex/polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Overfull \hbox (4.01257pt too wide) in paragraph at lines 27--32
+Overfull \hbox (4.01257pt too wide) in paragraph at lines 28--33
 \OT4/cmr/m/n/12 daw-cze-go-/do-±wiad-czal-ne-go-/o-bli-cze-nio-we-go (wg in-dy-
 wi-du-al-nych po-trzeb zwi¡-
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 37.
+(Font)              <14.4> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 37.
+(Font)              <7> on input line 38.
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--52
+Underfull \hbox (badness 10000) in paragraph at lines 39--53
 
  []
 
 [1
 
 {C:/Users/macie/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 193--199
+Underfull \hbox (badness 10000) in paragraph at lines 194--200
 
  []
 
@@ -255,174 +263,184 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--199
 <../img//App structure.png, id=28, 1177.39874pt x 526.96875pt>
 File: ../img//App structure.png Graphic file (type png)
 <use ../img//App structure.png>
-Package pdftex.def Info: ../img//App structure.png  used on input line 272.
+Package pdftex.def Info: ../img//App structure.png  used on input line 273.
 (pdftex.def)             Requested size: 412.09573pt x 184.44182pt.
 
-Overfull \hbox (22.09573pt too wide) in paragraph at lines 272--273
+Overfull \hbox (22.09573pt too wide) in paragraph at lines 273--274
 [][] 
  []
 
 <../img//Package extractor.png, id=29, 372.39125pt x 475.7775pt>
 File: ../img//Package extractor.png Graphic file (type png)
 <use ../img//Package extractor.png>
-Package pdftex.def Info: ../img//Package extractor.png  used on input line 281.
+Package pdftex.def Info: ../img//Package extractor.png  used on input line 282.
 
 (pdftex.def)             Requested size: 186.19516pt x 237.88815pt.
 [6 <../img//App structure.png (PNG copy)>]
 <../img//Features structure.png, id=35, 2128.95375pt x 361.35pt>
 File: ../img//Features structure.png Graphic file (type png)
 <use ../img//Features structure.png>
-Package pdftex.def Info: ../img//Features structure.png  used on input line 290
+Package pdftex.def Info: ../img//Features structure.png  used on input line 291
 .
 (pdftex.def)             Requested size: 425.78322pt x 72.2687pt.
 
-Overfull \hbox (35.78322pt too wide) in paragraph at lines 290--291
+Overfull \hbox (35.78322pt too wide) in paragraph at lines 291--292
 [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--294
-
  []
 
 <../img//Package features.png, id=36, 783.92876pt x 745.78625pt>
 File: ../img//Package features.png Graphic file (type png)
 <use ../img//Package features.png>
-Package pdftex.def Info: ../img//Package features.png  used on input line 297.
+Package pdftex.def Info: ../img//Package features.png  used on input line 298.
 (pdftex.def)             Requested size: 391.96342pt x 372.89221pt.
 
-Overfull \hbox (1.96342pt too wide) in paragraph at lines 297--298
+Overfull \hbox (1.96342pt too wide) in paragraph at lines 298--299
 [][] 
  []
 
-<../img//Package knn.png, id=37, 459.7175pt x 361.35pt>
-File: ../img//Package knn.png Graphic file (type png)
-<use ../img//Package knn.png>
-Package pdftex.def Info: ../img//Package knn.png  used on input line 306.
-(pdftex.def)             Requested size: 229.85818pt x 180.67456pt.
-<../img//Package main.png, id=38, 520.94624pt x 357.335pt>
-File: ../img//Package main.png Graphic file (type png)
-<use ../img//Package main.png>
-Package pdftex.def Info: ../img//Package main.png  used on input line 315.
-(pdftex.def)             Requested size: 260.47249pt x 178.66705pt.
-<../img//Package model.png, id=39, 318.18875pt x 373.395pt>
-File: ../img//Package model.png Graphic file (type png)
-<use ../img//Package model.png>
-Package pdftex.def Info: ../img//Package model.png  used on input line 325.
-(pdftex.def)             Requested size: 159.09398pt x 186.69704pt.
 
-Underfull \vbox (badness 3179) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <../img//Package extractor.png (PNG copy)> <../img//Features structure.png 
-(PNG copy)>] [8 <../img//Package features.png (PNG copy)> <../img//Package knn.
-png (PNG copy)>]
+(PNG copy)>]
+<../img//Package knn.png, id=41, 459.7175pt x 361.35pt>
+File: ../img//Package knn.png Graphic file (type png)
+<use ../img//Package knn.png>
+Package pdftex.def Info: ../img//Package knn.png  used on input line 307.
+(pdftex.def)             Requested size: 229.85818pt x 180.67456pt.
+<../img//Package main.png, id=42, 520.94624pt x 357.335pt>
+File: ../img//Package main.png Graphic file (type png)
+<use ../img//Package main.png>
+Package pdftex.def Info: ../img//Package main.png  used on input line 316.
+(pdftex.def)             Requested size: 260.47249pt x 178.66705pt.
+ [8 <../img//Package features.png (PNG copy)> <../img//Package knn.png (PNG cop
+y)>]
+<../img//Package model.png, id=46, 318.18875pt x 373.395pt>
+File: ../img//Package model.png Graphic file (type png)
+<use ../img//Package model.png>
+Package pdftex.def Info: ../img//Package model.png  used on input line 326.
+(pdftex.def)             Requested size: 159.09398pt x 186.69704pt.
 <../img//Package parser.png, id=47, 471.7625pt x 450.68375pt>
 File: ../img//Package parser.png Graphic file (type png)
 <use ../img//Package parser.png>
-Package pdftex.def Info: ../img//Package parser.png  used on input line 334.
+Package pdftex.def Info: ../img//Package parser.png  used on input line 335.
 (pdftex.def)             Requested size: 235.88066pt x 225.34131pt.
-<../img//Package utils.png, id=48, 411.5375pt x 94.3525pt>
+ [9 <../img//Package main.png (PNG copy)> <../img//Package model.png (PNG copy)
+>]
+<../img//Package utils.png, id=51, 411.5375pt x 94.3525pt>
 File: ../img//Package utils.png Graphic file (type png)
 <use ../img//Package utils.png>
-Package pdftex.def Info: ../img//Package utils.png  used on input line 343.
+Package pdftex.def Info: ../img//Package utils.png  used on input line 344.
 (pdftex.def)             Requested size: 205.76825pt x 47.17612pt.
-
-Underfull \vbox (badness 2495) has occurred while \output is active []
-
- [9 <../img//Package main.png (PNG copy)> <../img//Package model.png (PNG copy)
->] [10 <../img//Package parser.png (PNG copy)> <../img//Package utils.png (PNG 
-copy)>]
-[11]
+ [10 <../img//Package parser.png (PNG copy)> <../img//Package utils.png (PNG co
+py)>] [11]
 <../img//accuracy_k.png, id=58, 596.118pt x 208.488pt>
 File: ../img//accuracy_k.png Graphic file (type png)
 <use ../img//accuracy_k.png>
-Package pdftex.def Info: ../img//accuracy_k.png  used on input line 458.
+Package pdftex.def Info: ../img//accuracy_k.png  used on input line 459.
 (pdftex.def)             Requested size: 447.0874pt x 156.36562pt.
 
-Overfull \hbox (57.0874pt too wide) in paragraph at lines 458--459
+Overfull \hbox (57.0874pt too wide) in paragraph at lines 459--460
 [][] 
  []
 
-<../img//accuracy_div.png, id=59, 596.337pt x 208.926pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+<../img//accuracy_div.png, id=62, 596.337pt x 208.926pt>
 File: ../img//accuracy_div.png Graphic file (type png)
 <use ../img//accuracy_div.png>
-Package pdftex.def Info: ../img//accuracy_div.png  used on input line 486.
+Package pdftex.def Info: ../img//accuracy_div.png  used on input line 487.
 (pdftex.def)             Requested size: 447.25165pt x 156.6941pt.
 
-Overfull \hbox (57.25165pt too wide) in paragraph at lines 486--487
+Overfull \hbox (57.25165pt too wide) in paragraph at lines 487--488
 [][] 
  []
 
-<../img//accuracy_metric.png, id=60, 596.337pt x 209.145pt>
+
+Underfull \vbox (badness 2334) has occurred while \output is active []
+
+ [13 <../img//accuracy_k.png> <../img//accuracy_div.png>]
+<../img//accuracy_metric.png, id=69, 596.337pt x 209.145pt>
 File: ../img//accuracy_metric.png Graphic file (type png)
 <use ../img//accuracy_metric.png>
-Package pdftex.def Info: ../img//accuracy_metric.png  used on input line 511.
+Package pdftex.def Info: ../img//accuracy_metric.png  used on input line 512.
 (pdftex.def)             Requested size: 447.25165pt x 156.85835pt.
 
-Overfull \hbox (57.25165pt too wide) in paragraph at lines 511--512
+Overfull \hbox (57.25165pt too wide) in paragraph at lines 512--513
 [][] 
  []
 
-[12] [13 <../img//accuracy_k.png> <../img//accuracy_div.png>]
-Overfull \hbox (4.64313pt too wide) in paragraph at lines 525--533
+
+Overfull \hbox (4.64313pt too wide) in paragraph at lines 526--534
 [][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 533.
+(Font)              <10.95> on input line 534.
 <../img//features_set_1.png, id=70, 376.461pt x 208.488pt>
 File: ../img//features_set_1.png Graphic file (type png)
 <use ../img//features_set_1.png>
-Package pdftex.def Info: ../img//features_set_1.png  used on input line 538.
+Package pdftex.def Info: ../img//features_set_1.png  used on input line 539.
 (pdftex.def)             Requested size: 376.46008pt x 208.48749pt.
 
-Overfull \hbox (4.64313pt too wide) in paragraph at lines 549--557
+Underfull \vbox (badness 1642) has occurred while \output is active []
+
+ [14 <../img//accuracy_metric.png>]
+Overfull \hbox (4.64313pt too wide) in paragraph at lines 550--558
 [][] 
  []
 
-<../img//features_set_2.png, id=71, 376.461pt x 208.926pt>
+<../img//features_set_2.png, id=77, 376.461pt x 208.926pt>
 File: ../img//features_set_2.png Graphic file (type png)
 <use ../img//features_set_2.png>
-Package pdftex.def Info: ../img//features_set_2.png  used on input line 562.
+Package pdftex.def Info: ../img//features_set_2.png  used on input line 563.
 (pdftex.def)             Requested size: 376.46008pt x 208.92548pt.
 
-Underfull \vbox (badness 3098) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <../img//accuracy_metric.png>] [15 <../img//features_set_1.png> <../img//f
-eatures_set_2.png>]
-Overfull \hbox (4.64313pt too wide) in paragraph at lines 573--581
+ [15 <../img//features_set_1.png>]
+Overfull \hbox (4.64313pt too wide) in paragraph at lines 574--582
 [][] 
  []
 
-<../img//features_set_3.png, id=83, 376.461pt x 208.926pt>
+<../img//features_set_3.png, id=82, 376.461pt x 208.926pt>
 File: ../img//features_set_3.png Graphic file (type png)
 <use ../img//features_set_3.png>
-Package pdftex.def Info: ../img//features_set_3.png  used on input line 586.
+Package pdftex.def Info: ../img//features_set_3.png  used on input line 587.
 (pdftex.def)             Requested size: 376.46008pt x 208.92548pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--602
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <../img//features_set_2.png>] [17 <../img//features_set_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--605
+Underfull \hbox (badness 10000) in paragraph at lines 615--623
 
  []
 
-[16 <../img//features_set_3.png>] [17] (Sprawozdanie-projekt-1-klasyfikacja.aux
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--626
+
+ []
+
+[18] (Sprawozdanie-projekt-1-klasyfikacja.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3208 strings out of 479334
- 48689 string characters out of 2857085
- 340891 words of memory out of 3000000
- 20645 multiletter control sequences out of 15000+200000
+ 3270 strings out of 479334
+ 49540 string characters out of 2857085
+ 342258 words of memory out of 3000000
+ 20703 multiletter control sequences out of 15000+200000
  412128 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,448b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,8n,74p,545b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plrm.enc}{C:
 /Users/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/plit.enc}{C:/User
 s/macie/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/pl/pltt.enc}<C:/Users/mac
@@ -442,10 +460,10 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/macie/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><C:/Users/macie/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/pl/plti12.pfb><C:/Users/macie/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
-Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (17 pages, 665465 byt
+Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (18 pages, 669404 byt
 es).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

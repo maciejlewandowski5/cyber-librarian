@@ -3,6 +3,7 @@
 \usepackage{color}
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{float}
 
 \graphicspath{ {../img/} }
 
@@ -267,7 +268,7 @@ Uruchomiono program w czterech konfiguracjach, we wszystkich zastosowane metryk�
 \subsubsection{Struktura aplikacji}
 Aplikacja złożona jest z komponentów: extractor, features, knn, main, model, parser, utils. Struktura aplikacji została przedstawiona na rysunku \ref{app} na stronie \pageref{app}.
 
-\begin{figure}
+\begin{figure}[H]
 \label{app}
 \includegraphics[scale=0.35]{App structure}
 \caption{Struktura aplikacji}
@@ -276,7 +277,7 @@ Aplikacja złożona jest z komponentów: extractor, features, knn, main, model, 
 
 \subsubsection{extractor}
 Pakiet ekstraktor udostępnia narzędzia umożliwiające ekstrakcję cech z tekstów. Pakiet ekstraktor zaprezentowano na rysunku \ref{extr} na stronie \pageref{extr}.
-\begin{figure}
+\begin{figure}[H]
 \label{extr}
 \includegraphics[scale=0.5]{Package extractor}
 \caption{Pakiet extrator}
@@ -285,14 +286,14 @@ Pakiet ekstraktor udostępnia narzędzia umożliwiające ekstrakcję cech z teks
 
 \subsubsection{features}
 Pakiet features udostępnia abstrakcję cechy oraz modeluje logikę konkretnych cech. Pakiet features zaprezentowano na rysunku \ref{feat} oraz \ref{feat2} na stronie \pageref{feat}.
-\begin{figure}
+\begin{figure}[H]
 \label{feat}
 \includegraphics[scale=0.20]{Features structure}
 \caption{Struktura pakietu features}
 \end{figure}
-\newline
 
-\begin{figure}
+
+\begin{figure}[H]
 \label{feat2}
 \includegraphics[scale=0.5]{Package features}
 \caption{Pakiet features}
@@ -301,7 +302,7 @@ Pakiet features udostępnia abstrakcję cechy oraz modeluje logikę konkretnych 
 
 \subsubsection{knn}
 Pakiet knn udostępnia algorytm $k-NN$. Pakiet knn zaprezentowano na rysunku \ref{knn} na stronie \pageref{knn}.
-\begin{figure}
+\begin{figure}[H]
 \label{knn}
 \includegraphics[scale=0.5]{Package knn}
 \caption{Pakiet knn}
@@ -310,7 +311,7 @@ Pakiet knn udostępnia algorytm $k-NN$. Pakiet knn zaprezentowano na rysunku \re
 \subsubsection{main}
 Pakiet main stanowi wejście, oraz implementuje logikę CLI. Pakiet main zaprezentowano na rysunku \ref{main} na stronie \pageref{main}.
 
-\begin{figure}
+\begin{figure}[H]
 \label{main}
 \includegraphics[scale=0.5]{Package main}
 \caption{Pakiet main}
@@ -320,7 +321,7 @@ Pakiet main stanowi wejście, oraz implementuje logikę CLI. Pakiet main zapreze
 \subsubsection{model}
 Pakiet model dostarcza model danych dla artykułu reprezentowanego jako wektor cech oraz pozostałe wymagane modele danych. Pakiet model zaprezentowano na rysunku \ref{mdl} na stronie \pageref{mdl}.
 
-\begin{figure}
+\begin{figure}[H]
 \label{mdl}
 \includegraphics[scale=0.5]{Package model}
 \caption{Pakiet model}
@@ -329,7 +330,7 @@ Pakiet model dostarcza model danych dla artykułu reprezentowanego jako wektor c
 \subsubsection{parser}
 Pakiet parser udostępnia metody odpowiedzialne za przygotowanie tekstu przed ekstrakcją cech. Pakiet parser zaprezentowano na rysunku \ref{prs} na stronie \pageref{prs}.
 
-\begin{figure}
+\begin{figure}[H]
 \label{prs}
 \includegraphics[scale=0.5]{Package parser}
 \caption{Pakiet parser}
@@ -338,7 +339,7 @@ Pakiet parser udostępnia metody odpowiedzialne za przygotowanie tekstu przed ek
 
 \subsubsection{utils}
 Pakiet utils udostępnia narzędziowe metody wykorzystywane przez pozostałe pakiety.  Pakiet utils zaprezentowano na rysunku \ref{utls} na stronie \pageref{utls}.
-\begin{figure}
+\begin{figure}[H]
 \label{utls}
 \includegraphics[scale=0.5]{Package utils}
 \caption{Pakiet utils}
@@ -431,29 +432,29 @@ F1: 0.0
 \section{Wyniki klasyfikacji dla różnych parametrów wejściowych}
 
 \subsection{Wpływ ilości sąsiadów}
-Wykonano obliczenia dla dziesięciu wartości ilości sąsiadów z wykorzystaniem metryki euklidesowej oraz podziałem zbioru uczącego $60/40$. Wykres na stronie \pageref{accuracy_k} przedstawia wyniki obliczeń.  Wyniki zawarto w tabeli na stronie \pageref{tk}.
+Wykonano obliczenia dla dziesięciu wartości ilości sąsiadów z wykorzystaniem metryki euklidesowej oraz podziałem zbioru uczącego $60/40$. Wykres na stronie \pageref{accuracy_k} przedstawia wyniki obliczeń.  Wyniki zawarto w tabeli na stronie \pageref{tk}. Wartości precyzji, f1, czułości w tabeli są średnią arytmetyczną dla każdej z klasy.
 
 
-\begin{table}
+\begin{table}[H]
 \label{tk}
-\begin{tabular}{|c|c|}
-\hline k & accuracy \\
+\begin{tabular}{|c|c|c|c|c|}
+\hline k & accuracy & precission & recall & f1 \\
 \hline \hline
-1& 0.7578\\
-2& 0.7281\\
-5& 0.7618\\
-7& 0.7717\\
-10& 0.7306\\
-15& 0.7826\\
-20& 0.7799\\
-25& 0.7941\\
-50& 0.7921\\
-100& 0.7841\\
+1& 0.7578 & 0.3313 & 0.1678 & 0.1550\\
+2& 0.7281 & 0.3149 & 0.1725 & 0.1593\\
+5& 0.7618 & 0.4047 & 0.1671 & 0.1481\\
+7& 0.7717 & 0.5094 & 0.1728 & 0.1603\\
+10& 0.7306 & 0.5553 & 0.1742 & 0.1616\\
+15& 0.7826 & 0.4938 & 0.1744 & 0.1626 \\
+20& 0.7799 & 0.5746 & 0.1769 & 0.1664\\
+25& 0.7941 & 0.5140 & 0.1737 & 0.1609\\
+50& 0.7921 & 0.5718 & 0.1724 & 0.1588\\
+100& 0.7841 & 0.4913 & 0.1678 & 0.1508\\
 \end{tabular}
 \caption{Tabela przedstawiająca zależność dokładności od ilości sąsiadów}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 \label{accuracy_k}
 \includegraphics[scale=0.75]{accuracy_k}
 \caption{Wykres przedstawiający zależność dokładności od ilości sąsiadów}
@@ -464,16 +465,16 @@ Wykonano obliczenia dla dziesięciu wartości ilości sąsiadów z wykorzystanie
 \subsection{Wpływ proporcji podziału zbioru uczącego}
 Wykonano obliczenia dla pięciu podziału zbioru uczącego z wykorzystaniem metryki euklidesowej oraz ilości sąsiadów $25$. Wykres na stronie \pageref{accuracy_div} przedstawia wyniki obliczeń. Wyniki zawarto w tabeli na stronie \pageref{tdiv}.
 
-\begin{table}
+\begin{table}[H]
 \label{tdiv}
-\begin{tabular}{|c|c|}
-\hline proporcja podziału & accuracy \\
+\begin{tabular}{|c|c|c|c|c|}
+\hline proporcja podziału & accuracy & precission & recall & f1 \\
 \hline \hline
-10/90& 0.7882\\
-30/70& 0.7903\\
-50/50& 0.7937\\
-70/30& 0.7815\\
-90/10& 0.7847\\
+10/90& 0.7882 & 0.4742 & 0.1665 & 0.1476 \\
+30/70& 0.7903 & 0.5236 & 0.1734 & 0.1608 \\
+50/50& 0.7937 & 0.5570 & 0.1742 & 0.1619 \\
+70/30& 0.7815 & 0.5645 & 0.1813 & 0.1741 \\
+90/10& 0.7847 & 0.5082 & 0.1771 & 0.1674\\
 \end{tabular}
 \caption{Tabela przedstawiająca zależność dokładności od podziału zbioru uczącego}
 \end{table}
@@ -481,7 +482,7 @@ Wykonano obliczenia dla pięciu podziału zbioru uczącego z wykorzystaniem metr
 
 
 
-\begin{figure}
+\begin{figure}[H]
 \label{accuracy_div}
 \includegraphics[scale=0.75]{accuracy_div}
 \caption{Wykres przedstawiający zależność dokładności od podziału zbioru uczącego}
@@ -490,14 +491,14 @@ Wykonano obliczenia dla pięciu podziału zbioru uczącego z wykorzystaniem metr
 \subsection{Wpływ metryki}
 Wykonano obliczenia dla trzech metryk z ilością sąsiadów $k=25$ oraz podziale zbioru uczącego $60/40$. Wykres na stronie \pageref{accuracy_met} przedstawia wyniki obliczeń. Wyniki zawarto w tabeli na stronie \pageref{tmet}.
 
-\begin{table}
+\begin{table}[H]
 \label{tmet}
-\begin{tabular}{|c|c|}
-\hline metryka & accuracy \\
+\begin{tabular}{|c|c|c|c|c|}
+\hline metryka & accuracy & precission & recall & f1\\
 \hline \hline
-Euklidesowa& 0.7934\\
-Uliczna& 0.7844\\
-Czebyszewa& 0.7903\\
+Euklidesowa & 0.7934 & 0.5512 & 0.1763 & 0.1660 \\
+Uliczna & 0.7844 & 0.5139 & 0.1687 & 0.1534 \\
+Czebyszewa & 0.7903 & 0.5479 & 0.1667  & 0.1469 \\
 
 \end{tabular}
 \caption{Tabela przedstawiająca zależność dokładności od metryki odległości}
@@ -506,7 +507,7 @@ Czebyszewa& 0.7903\\
 
 
 
-\begin{figure}
+\begin{figure}[H]
 \label{accuracy_met}
 \includegraphics[scale=0.75]{accuracy_metric}
 \caption{Wykres przedstawiający zależność dokładności od metryki odległości}
@@ -520,7 +521,7 @@ Czebyszewa& 0.7903\\
 Miary precyzji, czułości oraz f1 podano jako średnią ze wszystkich klas. Parametry wejściowe ustawiono jako: podział $60/40$, $k=25$ oraz metrykę euklidesową. Wyniki zawarto w tabeli na stronie \pageref{tf1}. Wykres na stronie \pageref{features_set_1} przedstawia wyniki.
 
 
-\begin{table}
+\begin{table}[H]
 \label{tf1}
 \begin{tabular}{|c|c|c|c|c|}
 \hline  & cechy 1,2,5,9 & cechy 9,10,11,12 & cechy 5,6,7,8 & cechy 1,2,3,4 \\
@@ -533,7 +534,7 @@ f1 & 0.1475 & 0.1473 & 0.1609 & 0.1597 \\
 \caption{Tabela przedstawiająca wyniki pierwszego zestawu cech. Parametry wejściowe ustawiono jako: podział $60/40$, $k=25$.}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 \label{features_set_1}
 \includegraphics[scale=1]{features_set_1}
 \caption{Wykres przedstawiający zależność dokładności od metryki odległości. Parametry wejściowe ustawiono jako: podział $60/40$, $k=25$.}
@@ -544,7 +545,7 @@ f1 & 0.1475 & 0.1473 & 0.1609 & 0.1597 \\
 Miary precyzji, czułości oraz f1 podano jako średnią ze wszystkich klas. Parametry wejściowe ustawiono jako: podział $40/60$, $k=10$ oraz metrykę euklidesową. Wyniki zawarto w tabeli na stronie \pageref{tf2}. Wykres na stronie \pageref{features_set_2} przedstawia wyniki.
 
 
-\begin{table}
+\begin{table}[H]
 \label{tf2}
 \begin{tabular}{|c|c|c|c|c|}
 \hline  & cechy 1,2,5,9 & cechy 9,10,11,12 & cechy 5,6,7,8 & cechy 1,2,3,4 \\
@@ -557,7 +558,7 @@ f1 & 0.1471 & 0.1521 & 0.1601 & 0.1590 \\
 \caption{Tabela przedstawiająca wyniki drugiego zestawu cech. Parametry wejściowe ustawiono jako: podział $40/60$, $k=10$.}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 \label{features_set_2}
 \includegraphics[scale=1]{features_set_2}
 \caption{Wykres przedstawiający zależność dokładności od metryki odległości. Parametry wejściowe ustawiono jako: podział $40/60$, $k=10$.}
@@ -568,7 +569,7 @@ f1 & 0.1471 & 0.1521 & 0.1601 & 0.1590 \\
 Miary precyzji, czułości oraz f1 podano jako średnią ze wszystkich klas. Parametry wejściowe ustawiono jako: podział $20/80$, $k=3$ oraz metrykę euklidesową. Wyniki zawarto w tabeli na stronie \pageref{tf3}. Wykres na stronie \pageref{features_set_3} przedstawia wyniki.
 
 
-\begin{table}
+\begin{table}[H]
 \label{tf3}
 \begin{tabular}{|c|c|c|c|c|}
 \hline  & cechy 1,2,5,9 & cechy 9,10,11,12 & cechy 5,6,7,8 & cechy 1,2,3,4 \\
@@ -581,7 +582,7 @@ f1 & 0.668 1& 0.1618 & 0.1607 & 0.1809 \\
 \caption{Tabela przedstawiająca wyniki drugiego zestawu cech. Parametry wejściowe ustawiono jako: podział $20/80$, $k=3$.}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 \label{features_set_3}
 \includegraphics[scale=1]{features_set_3}
 \caption{Wykres przedstawiający zależność dokładności od metryki odległości. Parametry wejściowe ustawiono jako: podział $20/80$, $k=3$.}
@@ -590,6 +591,26 @@ f1 & 0.668 1& 0.1618 & 0.1607 & 0.1809 \\
 
 
 \section{Dyskusja, wnioski}
+
+
+\subsection{Wpływ ilości sąsiadów}
+Szczytową wartość dokładności osiągnięto dla dwudziestu-pięciu sąsiadów. Wartość dokładności rosła wraz ze wzrostem ilości sąsiadów. Zarejestrowano przerwy w trendzie wzrostowym dla wartości dwóch oraz dziesięciu sąsiadów. Gdy ilość sąsiadów staje się bliska liczności grupy dokładność zaczyna spadać. Uogólniając wartość dokładności rośnie wraz ze wzrostem ilości sąsiadów do momentu w którym ilość sąsiadów jest bliska rozmiarowi danej grupy.
+
+\subsection{Wpływ proporcji podziału zbioru uczącego}
+Wartość dokładności rośnie w miarę zwiększania części zbioru uczącego. Trend wzrostowy załamuje się w okolicach pięćdziesięciu procent. Wartości dokładności są niższe dla podziałów ze zbiorem uczącym większym niż testowym. Uogólniając najwyższe wartości dokładności można osiągnąć przy stosunkowo równym podziale zbioru uczącego i testowego.
+
+\subsection{Wpływ metryki}
+Najwyższą wartość dokładności zanotowano dla metryki euklidesowej. Kolejna była metryka Czebyszewa. Najniższą wartość zanotowano dla metryki Ulicznej.
+
+
+\subsection{Wpływ poszczególnych cech}
+Największy spadek dla średniej wartości precyzji zanotowano dla drugiego zestawu cech. Testy z cechami 1,2,5,9 oraz 9,10,11,12 dały prawie dwukrotnie większą precyzję niż testy dla cech 5,6,7,8 oraz 1,2,3,4. Na podstawie powyższego można wnioskować że cechy od 9 w górę, w szczególności cecha nr 9, mają większy wpływ na precyzję.
+
+\subsection{Wnioski ogólne z całego zadania}
+Problematyczne okazało się zastawianie danych dla całego eksperymentu ze względu na liczbę klas. Ostatecznie zdecydowano się zaprezentować wartości średnie ze wszystkich klas. Nie użyto średniej ważonej ponieważ średnia ważona z precyzji gdzie wagami jest liczność klas jest matematycznie równa dokładności.
+\newline
+
+
 
 Dokładne interpretacje uzyskanych wyników w zależności od parametrów klasyfikacji
 opisanych w punktach 3.-8 opisu Projektu 1. 
@@ -608,8 +629,7 @@ na WIKAMP KSR.}
 
 
 \section{Braki w realizacji projektu 1.}
-Wymienić wg opisu Projektu 1. wszystkie niezrealizowane obowiązkowe elementy projektu, ewentualnie
-podać merytoryczne (ale nie czasowe) przyczyny tych braków. 
+Zrealizowano wszystkie obowiązkowe elementy projektu.
 
 
 \begin{thebibliography}{0}
@@ -617,6 +637,4 @@ podać merytoryczne (ale nie czasowe) przyczyny tych braków.
 \bibitem{niewiadomski08} A. Niewiadomski, Methods for the Linguistic Summarization of Data: Applications of Fuzzy Sets and Their Extensions, Akademicka Oficyna Wydawnicza EXIT, Warszawa, 2008.
 \end{thebibliography}
 
-Literatura zawiera wyłącznie źródła recenzowane i/lub o potwierdzonej wiarygodności,
-możliwe do weryfikacji i cytowane w sprawozdaniu. 
 \end{document}
