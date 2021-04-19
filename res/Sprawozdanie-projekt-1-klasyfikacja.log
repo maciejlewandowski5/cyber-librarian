@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  16 APR 2021 12:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.5)  19 APR 2021 09:15
 entering extended mode
 **./Sprawozdanie-projekt-1-klasyfikacja.tex
 (Sprawozdanie-projekt-1-klasyfikacja.tex
@@ -419,12 +419,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 610--612
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 615--623
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--626
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--621
 
  []
 
@@ -460,7 +465,7 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/pl/plr12.pfb><C:/Users/macie/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/pl/plr17.pfb><C:/Users/macie/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/pl/plti12.pfb><C:/Users/macie/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/pl/pltt12.pfb>
-Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (18 pages, 669404 byt
+Output written on Sprawozdanie-projekt-1-klasyfikacja.pdf (18 pages, 669444 byt
 es).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)

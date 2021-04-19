@@ -604,28 +604,24 @@ Najwyższą wartość dokładności zanotowano dla metryki euklidesowej. Kolejna
 
 
 \subsection{Wpływ poszczególnych cech}
-Największy spadek dla średniej wartości precyzji zanotowano dla drugiego zestawu cech. Testy z cechami 1,2,5,9 oraz 9,10,11,12 dały prawie dwukrotnie większą precyzję niż testy dla cech 5,6,7,8 oraz 1,2,3,4. Na podstawie powyższego można wnioskować że cechy od 9 w górę, w szczególności cecha nr 9, mają większy wpływ na precyzję.
+Największy spadek dla średniej wartości precyzji zanotowano dla drugiego zestawu cech. Testy z cechami 1,2,5,9 oraz 9,10,11,12 dały prawie dwukrotnie większą precyzję niż testy dla cech 5,6,7,8 oraz 1,2,3,4. Na podstawie powyższego można wnioskować że cechy od 9-tej w górę, w szczególności cecha nr 9, mają większy wpływ na precyzję.
 
 \subsection{Wnioski ogólne z całego zadania}
 Problematyczne okazało się zastawianie danych dla całego eksperymentu ze względu na liczbę klas. Ostatecznie zdecydowano się zaprezentować wartości średnie ze wszystkich klas. Nie użyto średniej ważonej ponieważ średnia ważona z precyzji gdzie wagami jest liczność klas jest matematycznie równa dokładności.
 \newline
 
+Pierwotny wybór cech, w rzeczywistości był wyborem kierowanym intuicją. Dopiero po zbadaniu wpływu danej cechy na klasyfikację, możemy określić zasadność zastosowania danej cechy. Często cechy które wydawały się nam o istotnym znaczeniu, okazywały się mieć mały wpływ na ostateczną klasyfikację.
+\newline
+
+Kolejnym problemem uniemożliwiającym poprawną interpretację zadania okazał się podział zbioru artykułów na zaklasyfikowany i uczący. Po zdiagnozowaniu problemu wprowadziliśmy kontrolę poprawności podziału poprzez wymóg odpowiedniej ilości artykułów z każdego kraju.
+\newline
+
+Algorytm $k$ - NN jest stosunkowo prostym i łatwym w implementacji algorytmem. Uzyskanie wysokiej dokładności w klasyfikacji polega na trafnym doborze cech oraz wymianie/poprawie tych cech gdy nie wnoszą one w klasyfikację dodatkowych informacji. Podczas stosowania algorytmu $k$ - NN należy pamiętać aby celować w zbiór uczący podzielony w miarę równomiernie, oraz należy zadbać o to aby liczba sąsiadów nie zbliżała się do liczności najmniejszej z klas.
+\newline
 
 
-Dokładne interpretacje uzyskanych wyników w zależności od parametrów klasyfikacji
-opisanych w punktach 3.-8 opisu Projektu 1. 
-Szczególnie istotne są wnioski o charakterze uniwersalnym, istotne dla podobnych zadań. 
-Omówić i wyjaśnić napotkane problemy (jeśli były). Każdy wniosek/problem powinien mieć poparcie
-w przeprowadzonych eksperymentach (odwołania do konkretnych wyników: wykresów,
-tabel). \\
-\underline{Dla końcowej oceny jest to najważniejsza sekcja} sprawozdania, gdyż prezentuje poziom
-zrozumienia rozwiązywanego problemu.\\
+Jako dalszą pracę nad systemami rozpoznającymi i klasyfikującymi proponujemy system rekomendacji produktów w sklepie internetowym, który jest dostosowany adekwatnie do preferencji użytkownika.
 
-** Możliwości kontynuacji prac w obszarze systemów rozpoznawania, zwłaszcza w kontekście pracy inżynierskiej,
-magisterskiej, naukowej, itp. **\\
-
-\noindent {\bf Sekcja uzupełniona jako efekt zadania Tydzień 06 wg Harmonogramu Zajęć
-na WIKAMP KSR.}
 
 
 \section{Braki w realizacji projektu 1.}
